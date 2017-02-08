@@ -1,0 +1,48 @@
+{
+  "name": "grimoirejs-slide",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "license": "MIT",
+  "dependencies": {
+    "grimoirejs": "^0.14.3",
+    "grimoirejs-fundamental": "^0.12.7",
+    "grimoirejs-math": "^1.10.1",
+    "regenerator-runtime": "^0.10.1"
+  },
+  "scripts": {
+    "watch": "npm-run-all --parallel css-watch js-watch",
+    "build": "npm-run-all --parallel css-build js-build",
+    "js-build": "browserify -v -d index.babel.js | exorcist index.js.map -b ./ > index.js",
+    "js-watch": "watchify -v -d index.babel.js -o 'exorcist index.js.map > index.js'",
+    "css-watch": "stylus index.styl -w --include-css -r -m -u poststylus --with \"[ 'autoprefixer' ]\" -m --sourcemap-base ./ -o index.css",
+    "css-build": "stylus index.styl --include-css -r -m -u poststylus --with \"[ 'autoprefixer' ]\" -m --sourcemap-base ./ -o index.css"
+  },
+  "browserify": {
+    "transform": [
+      "stringify",
+      "babelify"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-es2016": "^6.22.0",
+    "babel-preset-es2017": "^6.22.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.0.0",
+    "exorcist": "^0.4.0",
+    "npm-run-all": "^4.0.1",
+    "poststylus": "^0.2.3",
+    "stringify": "^5.1.0",
+    "stylus": "^0.54.5",
+    "watchify": "^3.9.0"
+  },
+  "stringify": {
+    "appliesTo": {
+      "includeExtensions": [
+        ".sort"
+      ]
+    }
+  }
+}
