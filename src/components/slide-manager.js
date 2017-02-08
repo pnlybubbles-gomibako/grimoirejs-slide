@@ -39,8 +39,8 @@ module.exports = class SlideManager extends Component {
     if (!currentPageScene) { return; }
     const tween = delta !== 1 ? null : {
       transition: `transition-${previousPageScene.getAttribute('transition')}`,
-      easing: currentPageScene.getAttribute('easing'),
-      duration: currentPageScene.getAttribute('duration'),
+      easing: previousPageScene.getAttribute('easing'),
+      duration: previousPageScene.getAttribute('duration'),
     };
     const currentClearColor = currentPageScene.getAttribute('color');
     const previousClearColor = previousPageScene.getAttribute('color');

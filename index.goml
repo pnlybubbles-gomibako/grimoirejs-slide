@@ -1,14 +1,14 @@
 <goml height="512" width="512">
-  <page class="opening" color="pink" transition="push" duration="2">
+  <page color="pink" transition="push" duration="2" class="opening">
     <camera></camera>
     <mesh geometry="cube" color="red"></mesh>
     <!-- <mesh class="mesh2" geometry="cube" color="blue" position="2,0,0"></mesh> -->
   </page>
-  <page color="cyan">
+  <page color="cyan" duration="1" easing="easeOutExpo">
     <camera></camera>
     <mesh geometry="cube" color="green"></mesh>
   </page>
-  <page color="red">
+  <page color="red" duration="1" easing="easeOutBounce">
     <camera></camera>
     <mesh geometry="cube" color="blue"></mesh>
   </page>
