@@ -22,6 +22,14 @@ PageScene.attributes = {
     default: 'easeInOutQuint',
     converter: 'String',
   },
+  duration: {
+    default: 1,
+    converter: 'Number',
+  },
+  color: {
+    default: '#0000',
+    converter: 'Color4',
+  }
 };
 
 module.exports = PageScene;

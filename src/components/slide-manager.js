@@ -25,14 +25,28 @@ module.exports = class SlideManager extends Component {
     });
   }
 
+  $mount() {
+    process.nextTick(() => {
+      this.operate(0);
+    });
+  }
+
   operate(delta) {
     const slideRenderer = this.node.getComponentsInChildren('SlideRenderer')[0];
     const currentNumber = this.number + delta;
     const currentPageScene = this.pages[currentNumber];
     const previousPageScene = this.pages[this.number];
     if (!currentPageScene) { return; }
+    const tween = delta !== 1 ? null : {
+      transition: `transition-${previousPageScene.getAttribute('transition')}`,
+      easing: currentPageScene.getAttribute('easing'),
+      duration: currentPageScene.getAttribute('duration'),
+    };
+    const currentClearColor = currentPageScene.getAttribute('color');
+    const previousClearColor = previousPageScene.getAttribute('color');
     previousPageScene.node.emit('hide');
-    slideRenderer.transit(`#page${currentNumber}`, `#page${this.number}`);
+    slideRenderer.updateClearColor(currentClearColor, previousClearColor);
+    slideRenderer.transit(`#page${currentNumber}`, `#page${this.number}`, tween);
     currentPageScene.node.emit('show');
     this.number = currentNumber;
   }

@@ -1,18 +1,18 @@
 <goml height="512" width="512">
-  <page class="opening">
+  <page class="opening" color="pink" transition="push" duration="2">
     <camera></camera>
-    <mesh class="mesh1" geometry="cube" color="red"></mesh>
+    <mesh geometry="cube" color="red"></mesh>
     <!-- <mesh class="mesh2" geometry="cube" color="blue" position="2,0,0"></mesh> -->
   </page>
-  <page>
+  <page color="cyan">
     <camera></camera>
     <mesh geometry="cube" color="green"></mesh>
   </page>
-  <page>
+  <page color="red">
     <camera></camera>
     <mesh geometry="cube" color="blue"></mesh>
   </page>
-  <page>
+  <page color="black">
     <camera></camera>
     <mesh geometry="cube" color="pink"></mesh>
   </page>

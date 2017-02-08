@@ -21,7 +21,7 @@
 
     void main() {
       if (vTexCoord.x < 1. - progress) {
-        gl_FragColor = texture2D(previous, vTexCoord);
+        gl_FragColor = texture2D(previous, vec2(vTexCoord.x + progress, vTexCoord.y));
       } else {
         gl_FragColor = texture2D(current, vTexCoord);
       }

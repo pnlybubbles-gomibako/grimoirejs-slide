@@ -1664,9 +1664,9 @@ grimoirejs-cauldron@beta:
     watch "^1.0.1"
     yargs "^6.3.0"
 
-grimoirejs-fundamental@^0.12.7:
-  version "0.12.7"
-  resolved "https://registry.yarnpkg.com/grimoirejs-fundamental/-/grimoirejs-fundamental-0.12.7.tgz#6c9e846403c0c68fb0f7100b4c2af59d51971166"
+grimoirejs-fundamental@beta:
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/grimoirejs-fundamental/-/grimoirejs-fundamental-0.13.1.tgz#2c67a06fdb9c03a8e0cb25385fd7df698ff642fd"
   dependencies:
     "@types/json5" "0.0.29"
     json5 "^0.5.1"
@@ -1686,9 +1686,9 @@ grimoirejs@^0.13.0:
     events "^1.1.1"
     grimoirejs-cauldron "^2.1.3"
 
-grimoirejs@^0.14.3:
-  version "0.14.3"
-  resolved "https://registry.yarnpkg.com/grimoirejs/-/grimoirejs-0.14.3.tgz#d1ad86d29da610200bd07a77eae0d9477bee5543"
+grimoirejs@beta:
+  version "0.14.4-beta5"
+  resolved "https://registry.yarnpkg.com/grimoirejs/-/grimoirejs-0.14.4-beta5.tgz#af0a42a9a4b080f8f824865d0d285e7b118941ea"
   dependencies:
     "@types/node" "^6.0.47"
     events "^1.1.1"
@@ -3010,6 +3010,10 @@ shell-quote@^1.4.2, shell-quote@^1.6.1:
     array-map "~0.0.0"
     array-reduce "~0.0.0"
     jsonify "~0.0.0"
+
+shifty@^1.5.4:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/shifty/-/shifty-1.5.4.tgz#d4362fc914dd280ddf6e522be408b21203208346"
 
 signal-exit@^3.0.0:
   version "3.0.2"
