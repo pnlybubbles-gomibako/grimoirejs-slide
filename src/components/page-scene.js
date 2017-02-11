@@ -5,7 +5,9 @@ class PageScene extends Component {
   $mount() {
     this.slideManager = this.node.getComponentInAncestor('SlideManager');
     if (!this.slideManager) { return; }
-    this.slideManager.update();
+    process.nextTick(() => {
+      this.slideManager.update();
+    });
   }
 
   $unmount() {
@@ -29,7 +31,11 @@ PageScene.attributes = {
   color: {
     default: '#0000',
     converter: 'Color4',
-  }
+  },
+  order: {
+    default: 1000000,
+    converter: 'Number',
+  },
 };
 
 module.exports = PageScene;

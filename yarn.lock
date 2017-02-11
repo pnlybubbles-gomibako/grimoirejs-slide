@@ -7,8 +7,8 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
 
 "@types/node@^6.0.47":
-  version "6.0.62"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.62.tgz#85222c077b54f25b57417bb708b9f877bda37f89"
+  version "6.0.63"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.63.tgz#e08acbbd5946e0e95990b1c76f3ce5b7882a48eb"
 
 JSONStream@^1.0.3:
   version "1.3.0"
@@ -1630,23 +1630,6 @@ graceful-fs@~3.0.2:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
-grimoirejs-cauldron@^2.1.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/grimoirejs-cauldron/-/grimoirejs-cauldron-2.3.3.tgz#89c46b75fef227c600f9be6d799d4ca21d060548"
-  dependencies:
-    chalk "^1.1.3"
-    del "^2.2.2"
-    fs-extra "^1.0.0"
-    glob "^7.1.0"
-    handlebars "^4.0.6"
-    js-comments "^0.5.4"
-    progress "^1.1.8"
-    prompt "^1.0.0"
-    uglify-js "^2.7.3"
-    unzip "^0.1.11"
-    watch "^1.0.1"
-    yargs "^6.3.0"
-
 grimoirejs-cauldron@beta:
   version "2.3.1-beta6"
   resolved "https://registry.yarnpkg.com/grimoirejs-cauldron/-/grimoirejs-cauldron-2.3.1-beta6.tgz#b156cf9e45f4a31725f917efe39b6320de47c983"
@@ -1664,6 +1647,13 @@ grimoirejs-cauldron@beta:
     watch "^1.0.1"
     yargs "^6.3.0"
 
+grimoirejs-fundamental@^0.11.1-beta17:
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/grimoirejs-fundamental/-/grimoirejs-fundamental-0.11.2.tgz#0274cb152b7cdf376d5b9008be3d06f25fafbb5b"
+  dependencies:
+    "@types/json5" "0.0.29"
+    json5 "^0.5.1"
+
 grimoirejs-fundamental@beta:
   version "0.13.1"
   resolved "https://registry.yarnpkg.com/grimoirejs-fundamental/-/grimoirejs-fundamental-0.13.1.tgz#2c67a06fdb9c03a8e0cb25385fd7df698ff642fd"
@@ -1671,24 +1661,31 @@ grimoirejs-fundamental@beta:
     "@types/json5" "0.0.29"
     json5 "^0.5.1"
 
-grimoirejs-math@^1.10.1:
-  version "1.10.1"
-  resolved "https://registry.yarnpkg.com/grimoirejs-math/-/grimoirejs-math-1.10.1.tgz#fd114d26663003f365dbb522ec211bc1214520b5"
+grimoirejs-math@^1.11.2, grimoirejs-math@latest:
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/grimoirejs-math/-/grimoirejs-math-1.11.2.tgz#008951363e232a5471b850354095b4ff9ae27b7b"
   dependencies:
     gl-matrix "^2.3.2"
-    grimoirejs "^0.13.0"
 
-grimoirejs@^0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/grimoirejs/-/grimoirejs-0.13.0.tgz#100cb7e193cb54acc3971ad29c4d51f042625700"
+grimoirejs-text@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/grimoirejs-text/-/grimoirejs-text-1.0.0.tgz#4d5d14227d91ed904802a11ffed3f9bba988f1d9"
+  dependencies:
+    grimoirejs "^0.13.5-beta5"
+    grimoirejs-fundamental "^0.11.1-beta17"
+    grimoirejs-math latest
+
+grimoirejs@^0.13.5-beta5:
+  version "0.13.5-beta8"
+  resolved "https://registry.yarnpkg.com/grimoirejs/-/grimoirejs-0.13.5-beta8.tgz#49b1dcca233383f659d4b04447fb0a6d3dbc61f8"
   dependencies:
     "@types/node" "^6.0.47"
     events "^1.1.1"
-    grimoirejs-cauldron "^2.1.3"
+    grimoirejs-cauldron beta
 
 grimoirejs@beta:
-  version "0.14.4-beta5"
-  resolved "https://registry.yarnpkg.com/grimoirejs/-/grimoirejs-0.14.4-beta5.tgz#af0a42a9a4b080f8f824865d0d285e7b118941ea"
+  version "0.14.4-beta6"
+  resolved "https://registry.yarnpkg.com/grimoirejs/-/grimoirejs-0.14.4-beta6.tgz#231bc71389c39a18a7c303a72e838f01e8d436f4"
   dependencies:
     "@types/node" "^6.0.47"
     events "^1.1.1"
@@ -3470,13 +3467,9 @@ winston@2.1.x:
     pkginfo "0.3.x"
     stack-trace "0.0.x"
 
-wordwrap@0.0.2:
+wordwrap@0.0.2, wordwrap@~0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.2.tgz#b79669bb42ecb409f83d583cad52ca17eaa1643f"
-
-wordwrap@~0.0.2:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
 
 wrap-ansi@^2.0.0:
   version "2.1.0"
