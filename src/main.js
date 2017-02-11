@@ -4,15 +4,19 @@ const SlideManager = require('./components/slide-manager');
 const SlideRenderer = require('./components/slide-renderer');
 const SlideRenderScene = require('./components/slide-render-scene');
 const PageScene = require('./components/page-scene');
-const slideShader = require('./transition/slide.sort');
 
 const fxaaShader = require('./fxaa.sort');
+const slideShader = require('./transition/slide.sort');
 const pushShader = require('./transition/push.sort');
+const glitchShader = require('./transition/glitch.sort');
+const noiseShader = require('./transition/noise.sort');
 
 gr.register(async () => {
   MaterialFactory.addSORTMaterial('fxaa', fxaaShader);
   MaterialFactory.addSORTMaterial('transition-slide', slideShader);
   MaterialFactory.addSORTMaterial('transition-push', pushShader);
+  MaterialFactory.addSORTMaterial('transition-glitch', glitchShader);
+  MaterialFactory.addSORTMaterial('transition-noise', noiseShader);
   gr.registerComponent('SlideManager', SlideManager);
   gr.registerComponent('SlideRenderScene', SlideRenderScene);
   gr.registerComponent('SlideRenderer', SlideRenderer);
