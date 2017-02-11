@@ -1,0 +1,42 @@
+@Pass{
+FS_PREC(mediump,float)
+@ExposeMacro(int,test,TEST,1)
+varying vec2 vUV;
+#ifdef VS
+  attribute vec3 position;
+
+  attribute vec2 texCoord;
+  uniform mat4 _matPVM;
+  void main(){
+    gl_Position = _matPVM * vec4(position,1);
+    vUV = texCoord;
+  }
+#endif
+
+#ifdef FS
+
+@{default:"./images/i1.jpg"}
+uniform sampler2D current;
+
+@{default:"./images/i2.jpg"}
+uniform sampler2D previous;
+
+@{range:"0,1",default:0.5}
+uniform float progress;
+
+float rand(vec2 co){
+    return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453);
+}
+
+vec4 transition(vec4 c1,vec4 c2,float t,vec2 uv){
+  return (c2 - c1) * step(rand(uv),t) + c1;
+}
+
+ void main() {
+   vec4 fc = texture2D(from,vUV);
+   vec4 dc = texture2D(to,vUV);
+   gl_FragColor = transition(fc,dc,progress,vUV);
+   gl_FragColor.rgb *= float(TEST);
+ }
+#endif
+}

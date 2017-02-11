@@ -1,5 +1,5 @@
 <goml height="512" width="512">
-  <page class="opening" color="pink" transition="push" duration="2">
+  <page class="opening" color="pink" transition="noise" duration="2">
     <camera></camera>
     <mesh geometry="cube" color="red"></mesh>
     <!-- <mesh class="mesh2" geometry="cube" color="blue" position="2,0,0"></mesh> -->
