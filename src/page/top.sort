@@ -7,8 +7,9 @@
   #ifdef VS
     attribute vec3 position;
     attribute vec2 texCoord;
+    uniform mat4 _matPVM;
     void main(){
-      gl_Position = vec4(position, 1.);
+      gl_Position = _matPVM * vec4(position, 1.);
       vTexCoord = vec2(texCoord.x, 1. - texCoord.y);
     }
   #endif
