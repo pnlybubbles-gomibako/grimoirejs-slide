@@ -43,16 +43,12 @@ module.exports = class SlideRenderer extends Component {
     // const previousScene = this.node.getChildrenByClass('previousScene')[0].getComponent(RenderSceneComponent);
     if (this.transition) {
       this.transition.stop();
-    }
-    if (tween && MaterialFactory.materialGenerators[tween.transition]) {
-      this.slideRenderScene.setAttribute('material', `new(${tween.transition})`);
-      this.slideRenderScene.setAttribute('current','backbuffer(current-buffer)');
-      this.slideRenderScene.setAttribute('previous','backbuffer(previous-buffer)');
-    } else {
-      this.slideRenderScene.setAttribute('material', `new(transition-slide)`);
-      this.slideRenderScene.setAttribute('current','backbuffer(current-buffer)');
-      this.slideRenderScene.setAttribute('previous','backbuffer(previous-buffer)');
-    }
+    }``
+    // if (tween && MaterialFactory.materialGenerators[tween.transition]) {
+    //   this.slideRenderScene.setAttribute('material', `new(${tween.transition})`);
+    // } else {
+    //   this.slideRenderScene.setAttribute('material', `new(transition-slide)`);
+    // }
     if (tween) {
       this.transition = new Tweenable();
       this.transition.tween({

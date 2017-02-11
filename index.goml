@@ -1,4 +1,4 @@
-<goml height="512" width="512">
+<goml height="fit" width="fit">
   <page class="opening" color="pink" transition="noise" duration="2">
     <camera></camera>
     <mesh geometry="cube" color="red"></mesh>
@@ -6,7 +6,11 @@
   </page>
   <page color="cyan">
     <camera></camera>
-    <mesh geometry="cube" color="green"></mesh>
+    <mesh geometry="sphere" texture="images/360.jpg" scale="10,-10,10">
+      <mesh.components>
+        <Rotate/>
+      </mesh.components>
+    </mesh>
   </page>
   <page color="red">
     <camera></camera>
