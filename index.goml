@@ -1,12 +1,14 @@
-<goml height="512" width="512">
-  <page color="pink" transition="push" duration="2" class="opening">
+<goml>
+  <import-material typeName="topShader" src="./src/page/top.sort"></import-material>
+  <page color="#f9efd5" transition="push" duration="2" class="opening">
     <camera></camera>
-    <mesh geometry="cube" color="red"></mesh>
-    <!-- <mesh class="mesh2" geometry="cube" color="blue" position="2,0,0"></mesh> -->
+    <mesh geometry="quad" material="new(topShader)" scale="2" position="0,1.5,0"></mesh>
+    <mesh texture="src/page/logo.png" scale="3" position="0,0.5,-0.3"></mesh>
+    <text text="Web開発のためのWebGLフレームワーク" fontSize="50" textureSize="1024" scale="0.35" position="0,-2.5,0" color="#978b69"></text>
   </page>
-  <page color="cyan" duration="1" easing="easeOutExpo">
+  <page color="#381794" duration="1" easing="easeOutExpo">
     <camera></camera>
-    <mesh geometry="cube" color="green"></mesh>
+    <text text="WebGL" fontSize="100" textureSize="512" scale="0.8" color="#f9efd5" font="Avenir"></text>
   </page>
   <page color="red" duration="1" easing="easeOutBounce">
     <camera></camera>
@@ -16,15 +18,6 @@
     <camera></camera>
     <mesh geometry="cube" color="pink"></mesh>
   </page>
-  <!-- <renderer>
-    <texture-buffer name="current-buffer"></texture-buffer>
-    <texture-buffer name="previous-buffer"></texture-buffer>
-    <render-scene class="currentScene" camera=".cam1" out="current-buffer" enabled="true"></render-scene>
-    <render-scene class="previousScene" camera=".cam2" out="previous-buffer" enabled="false"></render-scene>
-    <slide-render-scene
-      material="new(transition-slide)"
-      current="backbuffer(current-buffer)"
-      previous="backbuffer(previous-buffer)">
-    </slide-render-scene>
-  </renderer> -->
+  <renderer>
+  </renderer>
 </goml>

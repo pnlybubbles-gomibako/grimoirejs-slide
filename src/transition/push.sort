@@ -20,10 +20,11 @@
     uniform float progress;
 
     void main() {
-      if (vTexCoord.x < 1. - progress) {
-        gl_FragColor = texture2D(previous, vec2(vTexCoord.x + progress, vTexCoord.y));
+      vec2 iTexCoord = vec2(1., -1.) * vTexCoord;
+      if (iTexCoord.x < 1. - progress) {
+        gl_FragColor = texture2D(previous, vec2(iTexCoord.x + progress, iTexCoord.y));
       } else {
-        gl_FragColor = texture2D(current, vTexCoord);
+        gl_FragColor = texture2D(current, iTexCoord);
       }
     }
   #endif

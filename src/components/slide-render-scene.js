@@ -18,7 +18,7 @@ class SlideRenderScene extends Component {
     this._materialContainer = this.node.getComponent('MaterialContainer');
   }
 
-  $bufferUpdated() {
+  $bufferUpdated(args) {
     const out = this.getAttribute('out');
     if (out !== 'default') {
       this._outFBO = new FrameBuffer(this._gl);
