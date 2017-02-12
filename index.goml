@@ -18,7 +18,7 @@
   </page>
   <page duration="1" easing="easeOutBounce" class="compare" order="1" build="2">
     <camera></camera>
-    <mesh color="green" geometry="cube" scale="0.8"></mesh>
+    <mesh color="green" geometry="cube" scale="0"></mesh>
   </page>
   <page color="black">
     <camera></camera>

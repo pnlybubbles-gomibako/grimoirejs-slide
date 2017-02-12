@@ -6,13 +6,15 @@
   "license": "MIT",
   "dependencies": {
     "bez": "^0.1.0",
+    "brace": "^0.9.1",
     "grimoirejs": "beta",
     "grimoirejs-fundamental": "beta",
     "grimoirejs-math": "^1.11.2",
     "grimoirejs-text": "^1.0.0",
     "jquery": "^3.1.1",
     "regenerator-runtime": "^0.10.1",
-    "shifty": "^1.5.4"
+    "shifty": "^1.5.4",
+    "three": "^0.84.0"
   },
   "scripts": {
     "watch": "npm-run-all --parallel css-watch js-watch",

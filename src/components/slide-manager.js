@@ -22,6 +22,10 @@ module.exports = class SlideManager extends Component {
           this.operate(1);
           break;
         case 'ArrowLeft':
+          if (this.build > 0) {
+            this.operate(0);
+            return;
+          }
           if (this.number === 0) {
             return;
           }
