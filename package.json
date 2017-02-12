@@ -5,6 +5,7 @@
   "repository": {},
   "license": "MIT",
   "dependencies": {
+    "bez": "^0.1.0",
     "grimoirejs": "beta",
     "grimoirejs-fundamental": "beta",
     "grimoirejs-math": "^1.11.2",
