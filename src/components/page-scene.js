@@ -13,6 +13,10 @@ class PageScene extends Component {
   $unmount() {
     this.slideManager.update();
   }
+
+  operate(i) {
+    this.slideManager.operate(i);
+  }
 }
 
 PageScene.attributes = {
@@ -33,9 +37,13 @@ PageScene.attributes = {
     converter: 'Color4',
   },
   order: {
-    default: 1000000,
+    default: null,
     converter: 'Number',
   },
+  build: {
+    default: 0,
+    converter: 'Number',
+  }
 };
 
 module.exports = PageScene;

@@ -9,6 +9,7 @@
     "grimoirejs-fundamental": "beta",
     "grimoirejs-math": "^1.11.2",
     "grimoirejs-text": "^1.0.0",
+    "jquery": "^3.1.1",
     "regenerator-runtime": "^0.10.1",
     "shifty": "^1.5.4"
   },
