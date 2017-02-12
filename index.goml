@@ -16,9 +16,9 @@
     <text text="WebGL" fontSize="100" textureSize="512" scale="0.8" color="#f9efd5" font="Avenir" position="0,0,1"></text>
     <mesh material="new(spaceShader)" slowNess="200"></mesh>
   </page>
-  <page duration="1" easing="easeOutBounce" class="compare" order="1" build="2">
+  <page duration="1" easing="easeOutBounce" class="compare" order="1" build="3">
     <camera></camera>
-    <mesh color="green" geometry="cube" scale="0"></mesh>
+    <mesh color="green" geometry="cube" scale="0"></mesh><!-- enabled is not work? -->
   </page>
   <page color="black">
     <camera></camera>

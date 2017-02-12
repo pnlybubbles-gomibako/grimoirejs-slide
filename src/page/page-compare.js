@@ -3,6 +3,7 @@ const $ = require('jquery');
 const {swifter} = require('./easing');
 require('./threejs-main')('#threejs-container .box', 512, 512);
 require('./jquery-main')('#jquery-container .box');
+require('./grimoire-main')('#canvas', '.compare mesh');
 
 const $$ = gr('#canvas');
 
@@ -31,7 +32,7 @@ const editors = editorConfig.map((v) => ace.edit(v.id));
 editors.forEach((editor, i) => {
   editor.getSession().setMode(`ace/mode/${editorConfig[i].mode}`);
   editor.renderer.setShowGutter(false);
-  editor.setFontSize(20);
+  editor.setFontSize(30);
 });
 
 $$('.compare').on('show', () => {
@@ -56,13 +57,32 @@ $$('.compare').on('build', (i) => {
       // });
       break;
     case 2:
-      // $('#jquery-container').animate({
-      //   top: -270,
-      // }, 500, swifter);
-      // $('#background .container').animate({
-      //   top: -270,
-      // }, 500, swifter);
+      $('#jquery-container .flex').animate({
+        height: 300,
+      }, 500, swifter);
+      $('#threejs-container .flex').animate({
+        height: 300,
+      }, 500, swifter);
       // $('#compare-editors').delay(500).fadeIn(500, swifter);
+      break;
+    case 3:
+      $('#jquery-container').animate({
+        left: '-50%',
+      }, 500, swifter);
+      $('#threejs-container').animate({
+        left: '0%',
+      }, 500, swifter);
+      $('#background .container').css({
+        left: '100%',
+        width: '50%',
+        height: 300,
+      })
+      $$('goml').single().getComponent('CanvasInitializer')._onWindowResize();
+      // $$('.compare').find('mesh').setAttribute('scale', 0.8); // find is not work?
+      $$('.compare mesh').setAttribute('scale', 1.6);
+      $('#background .container').animate({
+        left: '50%',
+      }, 500, swifter);
       break;
   }
 });
