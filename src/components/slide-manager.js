@@ -9,6 +9,7 @@ module.exports = class SlideManager extends Component {
     this.build = 0;
     document.addEventListener('keyup', (e) => {
       e.preventDefault();
+      if (this.pages.length === 0) { return; }
       switch (e.key) {
         case 'ArrowRight':
           if (this.pages[this.number].getAttribute('build') > this.build) {

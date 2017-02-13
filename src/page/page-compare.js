@@ -3,7 +3,7 @@ const $ = require('jquery');
 const {swifter} = require('./easing');
 require('./threejs-main')('#threejs-container .box', 512, 512);
 require('./jquery-main')('#jquery-container .box');
-require('./grimoire-main')('#canvas', '.compare mesh');
+require('./grimoire-main')('#compare-canvas', 'mesh');
 
 const $$ = gr('#canvas');
 
@@ -72,25 +72,25 @@ $$('.compare').on('build', (i) => {
       $('#threejs-container').animate({
         left: '0%',
       }, 500, swifter);
-      $('#background .container').css({
-        left: '100%',
-        width: '50%',
+      $('#grimoire-container .flex').css({
         height: 300,
-      })
-      $$('goml').single().getComponent('CanvasInitializer')._onWindowResize();
-      // $$('.compare').find('mesh').setAttribute('scale', 0.8); // find is not work?
-      $$('.compare mesh').setAttribute('scale', 1.6);
-      $('#background .container').animate({
+      });
+      $('#grimoire-container').css({
+        left: '100%',
+      }).show().animate({
         left: '50%',
       }, 500, swifter);
+      // $$('goml').single().getComponent('CanvasInitializer')._onWindowResize();
+      // $$('.compare').find('mesh').setAttribute('scale', 0.8); // find is not work?
+      // $$('.compare mesh').setAttribute('scale', 1.6);
       break;
   }
 });
 $$('.compare').on('hide', (i) => {
   console.log('hide compare');
-  $('#background .container').removeAttr('style');
+  // $('#background .container').removeAttr('style');
   $('#jquery-container').hide().removeAttr('style');
   $('#threejs-container').hide().removeAttr('style');
   $('#grimoire-container').hide().removeAttr('style');
-  $$('goml').single().getComponent('CanvasInitializer')._onWindowResize();
+  // $$('goml').single().getComponent('CanvasInitializer')._onWindowResize();
 });
