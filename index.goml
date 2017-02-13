@@ -1,20 +1,28 @@
 <goml height="fit" width="fit">
-  <page class="opening" color="pink" transition="noise" duration="2">
+  <page class="opening" color="pink" transition="noise" duration="0.8">
     <camera></camera>
     <mesh geometry="cube" color="red"></mesh>
     <!-- <mesh class="mesh2" geometry="cube" color="blue" position="2,0,0"></mesh> -->
   </page>
   <page color="cyan">
     <camera></camera>
-    <mesh geometry="sphere" texture="images/360.jpg" scale="10,-10,10">
+    <mesh geometry="sphere" texture="src/page/360.jpg" scale="10,10,-10">
       <mesh.components>
         <Rotate/>
       </mesh.components>
     </mesh>
   </page>
-  <page color="red">
-    <camera></camera>
-    <mesh geometry="cube" color="blue"></mesh>
+  <page color="white">
+    <object>
+      <object.components>
+        <Rotate/>
+      </object.components>
+      <camera far="200" position="0,1,2" rotation="x(-20d)"/>
+    </object>
+    <model src="src/page/BrainStem.glb" scale="0.5"/>
+    <mesh rotation="x(-90d)" texture="src/page/logo.png" scale="3"/>
+    <mesh geometry="sphere" texture="src/page/3602.jpg" scale="10,10,-10" position="0,5,0">
+    </mesh>
   </page>
   <page color="black">
     <camera></camera>

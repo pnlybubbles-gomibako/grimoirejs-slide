@@ -14,12 +14,14 @@ module.exports = class SlideRenderer extends Component {
     this.currentScene = this.node.addChildByName('render-scene', {
       id: 'current-render-scene',
       out: 'current-buffer',
+      depthBuffer:'current-render-buffer',
       camera: null,
       enabled: false,
     });
     this.previousScene = this.node.addChildByName('render-scene', {
       id: 'previous-render-scene',
       out: 'previous-buffer',
+      depthBuffer: 'previous-render-buffer',
       camera: null,
       enabled: false,
     });
@@ -28,6 +30,12 @@ module.exports = class SlideRenderer extends Component {
     });
     this.node.addChildByName('texture-buffer', {
       name: 'previous-buffer',
+    });
+    this.node.addChildByName('render-buffer', {
+      name: 'current-render-buffer',
+    });
+    this.node.addChildByName('render-buffer', {
+      name: 'previous-render-buffer',
     });
     this.node.addChildByName('texture-buffer', {
       name: 'fxaa-buffer',

@@ -1661,9 +1661,23 @@ grimoirejs-fundamental@beta:
     "@types/json5" "0.0.29"
     json5 "^0.5.1"
 
+grimoirejs-gltf@beta:
+  version "1.8.0-beta3"
+  resolved "https://registry.yarnpkg.com/grimoirejs-gltf/-/grimoirejs-gltf-1.8.0-beta3.tgz#32f3b7483fb39fbdbd6047428d44ee29917c24a0"
+  dependencies:
+    grimoirejs beta
+    grimoirejs-fundamental beta
+    grimoirejs-math beta
+
 grimoirejs-math@^1.11.2, grimoirejs-math@latest:
   version "1.11.2"
   resolved "https://registry.yarnpkg.com/grimoirejs-math/-/grimoirejs-math-1.11.2.tgz#008951363e232a5471b850354095b4ff9ae27b7b"
+  dependencies:
+    gl-matrix "^2.3.2"
+
+grimoirejs-math@beta:
+  version "1.11.3"
+  resolved "https://registry.yarnpkg.com/grimoirejs-math/-/grimoirejs-math-1.11.3.tgz#a70e9e543b311bd6cc8ca58ea1b0469893beddc8"
   dependencies:
     gl-matrix "^2.3.2"
 

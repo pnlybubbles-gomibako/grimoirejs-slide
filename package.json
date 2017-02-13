@@ -7,6 +7,7 @@
   "dependencies": {
     "grimoirejs": "beta",
     "grimoirejs-fundamental": "beta",
+    "grimoirejs-gltf": "beta",
     "grimoirejs-math": "^1.11.2",
     "grimoirejs-text": "^1.0.0",
     "regenerator-runtime": "^0.10.1",
