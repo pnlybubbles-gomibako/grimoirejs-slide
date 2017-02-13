@@ -12,7 +12,7 @@
   </page>
   <page color="#5C3DA8">
     <camera/>
-    <text text="WebGL" color="white" size="10" font="20pt Meiryo"/>
+    <text text="WebGL" color="white" size="10" font="50pt Meiryo"/>
   </page>
   <page color="white">
     <object>
