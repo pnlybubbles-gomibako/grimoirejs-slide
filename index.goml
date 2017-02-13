@@ -16,13 +16,14 @@
     <text text="WebGL" fontSize="100" textureSize="512" scale="0.8" color="#f9efd5" font="Avenir" position="0,0,1"></text>
     <mesh material="new(spaceShader)" slowNess="200"></mesh>
   </page>
-  <page duration="1" easing="easeOutBounce" class="compare" order="1" build="4">
+  <page duration="1" easing="easeOutBounce" class="compare" build="4">
     <camera></camera>
     <mesh color="green" geometry="cube" scale="0"></mesh><!-- enabled is not work? -->
   </page>
-  <page color="black">
+  <page color="#f9efd5" order="1" class="editor" build="3">
     <camera></camera>
-    <mesh geometry="cube" color="pink" material="new(unlit)"></mesh>
+    <light></light>
+    <mesh diffuse="orange" specularRatio="0" geometry="cube" scale="0.5"></mesh>
   </page>
   <renderer>
   </renderer>

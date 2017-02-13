@@ -112,8 +112,7 @@ $$('.compare').on('build', (i) => {
 $$('.compare').on('hide', (i) => {
   console.log('hide compare');
   // $('#background .container').removeAttr('style');
-  $('#jquery-container').hide().removeAttr('style');
-  $('#threejs-container').hide().removeAttr('style');
-  $('#grimoire-container').hide().removeAttr('style');
+  $('.compare-container').hide().removeAttr('style');
+  $('.compare-container .flex').removeAttr('style');
   // $$('goml').single().getComponent('CanvasInitializer')._onWindowResize();
 });

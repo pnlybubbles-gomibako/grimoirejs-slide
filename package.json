@@ -8,7 +8,7 @@
     "bez": "^0.1.0",
     "brace": "^0.9.1",
     "grimoirejs": "beta",
-    "grimoirejs-forward-shading": "^1.3.3",
+    "grimoirejs-forward-shading": "^1.4.0",
     "grimoirejs-fundamental": "beta",
     "grimoirejs-math": "^1.11.2",
     "grimoirejs-text": "^1.0.0",

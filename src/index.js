@@ -14,4 +14,5 @@ gr(() => {
 
   // pages
   require('./page/page-compare');
+  require('./page/page-editor');
 });

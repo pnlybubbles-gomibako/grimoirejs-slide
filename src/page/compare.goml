@@ -2,6 +2,6 @@
     <scene>
         <camera/>
         <light position="10" rotation="0,45,45"></light>
-        <mesh albedo="orange" geometry="cube" kCoeff="0.8" intensity="2" refractive="20"></mesh>
+        <mesh diffuse="orange" geometry="cube" specularRatio="0"></mesh>
     </scene>
 </goml>
