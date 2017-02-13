@@ -4,6 +4,7 @@ const transition = new Tweenable();
 const fp = $$(".fusion-page");
 fp.on("build",function(i){
   const fusionShader = $$("mesh.fusion-shader");
+    const grLogo = $$("mesh.gr-logo");
   switch(i){
     case 1:
       transition.tween({
@@ -17,6 +18,7 @@ fp.on("build",function(i){
         easing: "easeInOutQuad",
         step: (state) => {
           fusionShader.setAttribute('progress', state.progress);
+          grLogo.setAttribute('color',`rgba(255,255,255,${state.progress})`)
         },
       });
   }
@@ -24,4 +26,5 @@ fp.on("build",function(i){
 
 fp.on("hide",function(){
   $$("mesh.fusion-shader").setAttribute("progress","0");
+  $$("mesh.gr-logo").setAttribute('color','rgba(255,255,255,0)');
 });
