@@ -84,6 +84,29 @@ $$('.compare').on('build', (i) => {
       // $$('.compare').find('mesh').setAttribute('scale', 0.8); // find is not work?
       // $$('.compare mesh').setAttribute('scale', 1.6);
       break;
+    case 4:
+      $('#threejs-container').css({
+        transform: 'scale(1)',
+      })
+      $({
+        scale: 1,
+      }).animate({
+        scale: 0.3,
+      }, {
+        duration: 500,
+        easing: swifter,
+        step(now) {
+          $('#threejs-container').css({
+            transform: `scale(${now})`,
+          });
+        },
+        queue: false,
+      })
+      $('#threejs-container').fadeOut(500, swifter);
+      $('#jquery-container').delay(200).animate({
+        left: '0%',
+      });
+      break;
   }
 });
 $$('.compare').on('hide', (i) => {

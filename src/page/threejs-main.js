@@ -9,11 +9,14 @@ var main = function(selector, width, height) {
         antialias: true
     });
     renderer.setSize(width, height);
+    const light = new THREE.DirectionalLight(0xffffff);
+    light.position.set(1, 1, 1).normalize();
+    scene.add(light);
     const obj = document.querySelector(selector);
     obj.appendChild(renderer.domElement);
-    var geometry = new THREE.CubeGeometry(14, 14, 14);
-    var material = new THREE.MeshBasicMaterial({
-        color: "green"
+    var geometry = new THREE.CubeGeometry(13, 13, 13);
+    var material = new THREE.MeshPhongMaterial({
+        color: "orange"
     });
     var mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
@@ -35,6 +38,8 @@ var main = function(selector, width, height) {
         var objs = ray.intersectObjects(scene.children);
         if (objs.length > 0) {
             material.color.set("blue");
+        } else {
+            material.color.set("orange");
         }
     }
     (function update() {

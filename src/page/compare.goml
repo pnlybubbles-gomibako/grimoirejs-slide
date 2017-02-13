@@ -1,7 +1,7 @@
 <goml width="512" height="512">
     <scene>
-        <camera>
-        </camera>
-        <mesh color="green" geometry="cube"></mesh>
+        <camera/>
+        <light position="10" rotation="0,45,45"></light>
+        <mesh albedo="orange" geometry="cube" kCoeff="0.8" intensity="2" refractive="20"></mesh>
     </scene>
 </goml>

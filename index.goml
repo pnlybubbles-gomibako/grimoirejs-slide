@@ -8,7 +8,7 @@
       </camera.components> -->
     </camera>
     <mesh geometry="quad" material="new(topShader)" scale="4" position="0,1,0"></mesh>
-    <mesh texture="src/page/logo.png" scale="3" position="0,0.5,-0.3"></mesh>
+    <mesh texture="src/page/logo.png" scale="3" position="0,0.5,-0.3" material="new(unlit)"></mesh>
     <text text="Web開発のためのWebGLフレームワーク" fontSize="50" textureSize="1024" scale="0.35" position="0,-2.5,0" color="#978b69"></text>
   </page>
   <page color="#381794" duration="1" easing="easeOutExpo" build="1">
@@ -16,13 +16,13 @@
     <text text="WebGL" fontSize="100" textureSize="512" scale="0.8" color="#f9efd5" font="Avenir" position="0,0,1"></text>
     <mesh material="new(spaceShader)" slowNess="200"></mesh>
   </page>
-  <page duration="1" easing="easeOutBounce" class="compare" order="1" build="3">
+  <page duration="1" easing="easeOutBounce" class="compare" order="1" build="4">
     <camera></camera>
     <mesh color="green" geometry="cube" scale="0"></mesh><!-- enabled is not work? -->
   </page>
   <page color="black">
     <camera></camera>
-    <mesh geometry="cube" color="pink"></mesh>
+    <mesh geometry="cube" color="pink" material="new(unlit)"></mesh>
   </page>
   <renderer>
   </renderer>
