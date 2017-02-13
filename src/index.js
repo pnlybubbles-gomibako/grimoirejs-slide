@@ -13,6 +13,7 @@ gr(() => {
   });
 
   // pages
+  require('./page/opening-page');
   require('./page/page-compare');
   require('./page/page-editor');
 });

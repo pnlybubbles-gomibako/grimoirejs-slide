@@ -1,32 +1,18 @@
 <goml>
   <import-material typeName="topShader" src="./src/page/top.sort"></import-material>
   <import-material typeName="spaceShader" src="./src/page/space.sort"></import-material>
-  <page color="#f9efd5" transition="push" duration="2" class="opening">
-    <camera>
-      <!-- <camera.components>
-        <MouseCameraControl></MouseCameraControl>
-      </camera.components> -->
-    </camera>
+  <page color="#f9efd5" transition="noise" duration="2" class="opening" build="2">
+    <object class="camera-origin">
+      <camera/>
+    </object>
     <mesh geometry="quad" material="new(topShader)" scale="4" position="0,1,0"></mesh>
     <mesh texture="src/page/logo.png" scale="3" position="0,0.5,-0.3" material="new(unlit)"></mesh>
+    <mesh texture="src/page/self-intro.png" material="new(unlit)" rotation="y(180d)" position="0,0,0.5" scale="7,4,0"/>
     <text text="Web開発のためのWebGLフレームワーク" fontSize="50" textureSize="1024" scale="0.35" position="0,-2.5,0" color="#978b69"></text>
   </page>
-  <page color="#381794" duration="1" easing="easeOutExpo" build="1">
-    <camera></camera>
-    <mesh geometry="cube" color="red"></mesh>
-    <!-- <mesh class="mesh2" geometry="cube" color="blue" position="2,0,0"></mesh> -->
-  </page>
-  <page duration="1" easing="easeOutBounce" class="compare" build="4">
-    <camera></camera>
-    <mesh color="green" geometry="cube" scale="0"></mesh><!-- enabled is not work? -->
-  </page>
-  <page color="cyan">
-    <camera></camera>
-    <mesh geometry="sphere" texture="src/page/360.jpg" scale="10,10,-10">
-      <mesh.components>
-        <Rotate/>
-      </mesh.components>
-    </mesh>
+  <page color="#5C3DA8">
+    <camera/>
+    <text text="WebGL" color="white" scale="3"/>
   </page>
   <page color="white">
     <object>
@@ -36,15 +22,37 @@
       <camera far="200" position="0,1,2" rotation="x(-20d)"/>
     </object>
     <model src="src/page/BrainStem.glb" scale="0.5"/>
-    <mesh rotation="x(-90d)" texture="src/page/logo.png" scale="3"/>
-    <mesh geometry="sphere" texture="src/page/3602.jpg" scale="10,10,-10" position="0,5,0">
+    <mesh rotation="x(-90d)" texture="src/page/logo.png" scale="3" material="new(unlit)"/>
+    <mesh geometry="sphere" texture="src/page/3602.jpg" scale="10,10,-10" position="0,5,0" material="new(unlit)">
     </mesh>
   </page>
-  <page color="#f9efd5" order="1" class="editor" build="3">
+  <page color="#f9efd5" class="webgl-shader">
+    <camera></camera>
+    <mesh material="new(spaceShader)"></mesh>
+  </page>
+  <page color="cyan" class="360-degree">
+    <camera></camera>
+    <mesh geometry="sphere" texture="src/page/360.jpg" scale="10,10,-10" material="new(unlit)">
+      <mesh.components>
+        <Rotate/>
+      </mesh.components>
+    </mesh>
+  </page>
+  <!-- <page color="#381794" duration="1" easing="easeOutExpo" build="1">
+    <camera></camera>
+    <mesh geometry="cube" color="red"></mesh>
+    <mesh class="mesh2" geometry="cube" color="blue" position="2,0,0"></mesh>
+  </page> -->
+  <page duration="1" easing="easeOutBounce" class="compare" build="4">
+    <camera></camera>
+    <mesh color="green" geometry="cube" scale="0"></mesh><!-- enabled is not work? -->
+  </page>
+  <page color="#f9efd5" class="editor" build="3">
     <camera></camera>
     <light></light>
     <mesh diffuse="orange" geometry="cube" scale="0.5"></mesh>
   </page>
+
   <!-- <renderer>
     <texture-buffer name="current-buffer"></texture-buffer>
     <texture-buffer name="previous-buffer"></texture-buffer>
