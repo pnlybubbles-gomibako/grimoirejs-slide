@@ -49,7 +49,7 @@ $('#editor-container .xml .run').on('click', (this_) => {
   const scene = parsed.querySelector('scene');
   console.log(scene);
   $$('.editor *').forEach((v) => {
-    if (!v.name.name === 'camera') {
+    if (v.name.name !== 'camera') {
       v.remove();
     }
   });
