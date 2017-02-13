@@ -43,7 +43,7 @@
   <page color="#f9efd5" order="1" class="editor" build="3">
     <camera></camera>
     <light></light>
-    <mesh diffuse="orange" specularRatio="0" geometry="cube" scale="0.5"></mesh>
+    <mesh diffuse="orange" geometry="cube" scale="0.5"></mesh>
   </page>
   <!-- <renderer>
     <texture-buffer name="current-buffer"></texture-buffer>

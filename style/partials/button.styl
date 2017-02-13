@@ -1,0 +1,16 @@
+button(color, inverse-color)
+  padding 8px 30px
+  border solid 4px color
+  border-radius 8px
+  transition all 0.3s
+  font-weight bold
+  color color
+  cursor pointer
+  user-select none
+
+  &:hover
+    background-color color
+    color inverse-color
+
+  &:active
+    opacity 0.8
