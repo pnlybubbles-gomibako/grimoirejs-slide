@@ -30,6 +30,7 @@ editors.forEach((editor, i) => {
   editor.renderer.setShowGutter(false);
   editor.setFontSize(30);
   editor.setValue(editorConfig[i].text);
+  editor.clearSelection();
 });
 
 {

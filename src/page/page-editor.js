@@ -11,12 +11,12 @@ const editorConfig = [
   {
     id: 'xml-editor',
     mode: 'xml',
-    text: require('./sample-change-color.goml.txt'),
+    text: require('./sample/sample-change-color.goml.txt'),
   },
   {
     id: 'js-editor',
     mode: 'javascript',
-    text: 'hello js',
+    text: 'console.log("hello world");',
   },
 ];
 editorConfig.forEach((v) => {
@@ -30,13 +30,19 @@ editors.forEach((editor, i) => {
   editor.renderer.setShowGutter(false);
   editor.setFontSize(30);
   editor.setValue(editorConfig[i].text);
+  editor.clearSelection();
 });
-
+// const mesh = $$('#cube').single();
+// mesh.on('mouseenter', () => {
+//   mesh.setAttribute('diffuse', 'blue');
+// });
+// mesh.on('mouseleave', () => {
+//   mesh.setAttribute('diffuse', 'pink');
+// });
 {
-  const mesh = $$('.editor mesh');
   let phi = 0;
   const rotate = () => {
-    mesh.setAttribute('rotation', `0,${phi},${phi}`);
+    $$('.editor mesh').setAttribute('rotation', `0,${phi},${phi}`);
     phi += 1;
     requestAnimationFrame(rotate);
   }
@@ -49,15 +55,20 @@ $('#editor-container .xml .run').on('click', (this_) => {
   const scene = parsed.querySelector('scene');
   console.log(scene);
   $$('.editor *').forEach((v) => {
-    if (v.name.name !== 'camera') {
+    if (v.name.name !== 'camera' && v.name.name !== 'light') {
       v.remove();
     }
   });
   Array.from(scene.childNodes).forEach((node) => {
     if (node.nodeType !== 1) { return; }
-    if (node.nodeName === 'camera') { return; }
+    if (node.nodeName === 'camera' || node.nodeName === 'light') { return; }
     $$('.editor').append(node.outerHTML);
   });
+});
+
+$('#editor-container .js .run').on('click', (this_) => {
+  const text = editors[1].getValue();
+  eval(text);
 });
 
 $$('.editor').on('show', () => {
