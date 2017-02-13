@@ -4,6 +4,7 @@ const SlideManager = require('./components/slide-manager');
 const SlideRenderer = require('./components/slide-renderer');
 const SlideRenderScene = require('./components/slide-render-scene');
 const PageScene = require('./components/page-scene');
+const Rotate = require('./components/rotate')
 
 const fxaaShader = require('./fxaa.sort');
 const slideShader = require('./transition/slide.sort');

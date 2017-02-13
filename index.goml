@@ -13,18 +13,47 @@
   </page>
   <page color="#381794" duration="1" easing="easeOutExpo" build="1">
     <camera></camera>
-    <text text="WebGL" fontSize="100" textureSize="512" scale="0.8" color="#f9efd5" font="Avenir" position="0,0,1"></text>
-    <mesh material="new(spaceShader)" slowNess="200"></mesh>
+    <mesh geometry="cube" color="red"></mesh>
+    <!-- <mesh class="mesh2" geometry="cube" color="blue" position="2,0,0"></mesh> -->
   </page>
   <page duration="1" easing="easeOutBounce" class="compare" build="4">
     <camera></camera>
     <mesh color="green" geometry="cube" scale="0"></mesh><!-- enabled is not work? -->
+  </page>
+  <page color="cyan">
+    <camera></camera>
+    <mesh geometry="sphere" texture="src/page/360.jpg" scale="10,10,-10">
+      <mesh.components>
+        <Rotate/>
+      </mesh.components>
+    </mesh>
+  </page>
+  <page color="white">
+    <object>
+      <object.components>
+        <Rotate/>
+      </object.components>
+      <camera far="200" position="0,1,2" rotation="x(-20d)"/>
+    </object>
+    <model src="src/page/BrainStem.glb" scale="0.5"/>
+    <mesh rotation="x(-90d)" texture="src/page/logo.png" scale="3"/>
+    <mesh geometry="sphere" texture="src/page/3602.jpg" scale="10,10,-10" position="0,5,0">
+    </mesh>
   </page>
   <page color="#f9efd5" order="1" class="editor" build="3">
     <camera></camera>
     <light></light>
     <mesh diffuse="orange" specularRatio="0" geometry="cube" scale="0.5"></mesh>
   </page>
-  <renderer>
-  </renderer>
+  <!-- <renderer>
+    <texture-buffer name="current-buffer"></texture-buffer>
+    <texture-buffer name="previous-buffer"></texture-buffer>
+    <render-scene class="currentScene" camera=".cam1" out="current-buffer" enabled="true"></render-scene>
+    <render-scene class="previousScene" camera=".cam2" out="previous-buffer" enabled="false"></render-scene>
+    <slide-render-scene
+      material="new(transition-slide)"
+      current="backbuffer(current-buffer)"
+      previous="backbuffer(previous-buffer)">
+    </slide-render-scene>
+  </renderer> -->
 </goml>

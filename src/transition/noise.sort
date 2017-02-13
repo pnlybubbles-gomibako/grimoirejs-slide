@@ -10,6 +10,7 @@ varying vec2 vUV;
   void main(){
     gl_Position = _matPVM * vec4(position,1);
     vUV = texCoord;
+    vUV.y = 1. - vUV.y;
   }
 #endif
 
@@ -33,8 +34,8 @@ vec4 transition(vec4 c1,vec4 c2,float t,vec2 uv){
 }
 
  void main() {
-   vec4 fc = texture2D(from,vUV);
-   vec4 dc = texture2D(to,vUV);
+   vec4 fc = texture2D(previous,vUV);
+   vec4 dc = texture2D(current,vUV);
    gl_FragColor = transition(fc,dc,progress,vUV);
    gl_FragColor.rgb *= float(TEST);
  }

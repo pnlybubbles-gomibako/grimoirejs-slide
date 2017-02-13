@@ -10,6 +10,7 @@ varying vec2 vUV;
   void main(){
     gl_Position = _matPVM * vec4(position,1);
     vUV = texCoord;
+    vUV.y = 1. - vUV.y;
   }
 #endif
 
