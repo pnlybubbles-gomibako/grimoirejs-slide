@@ -17,4 +17,5 @@ gr(() => {
   require('./page/page-compare');
   require('./page/page-editor');
   require('./page/page-world');
+  require('./page/fusion-page');
 });
