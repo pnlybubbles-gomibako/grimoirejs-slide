@@ -52,13 +52,14 @@ module.exports = class SlideRenderer extends Component {
     // });
   }
 
-  transit(currentCameraQuery, previousCameraQuery, tween) {
+  transit(currentCameraQuery, previousCameraQuery, tween, cb) {
     // console.log(currentCameraQuery, previousCameraQuery, tween);
     // this.rendererComponent.setAttribute('camera', toCameraQuery);
     // const currentScene = this.node.getChildrenByClass('currentScene')[0].getComponent(RenderSceneComponent);
     // const previousScene = this.node.getChildrenByClass('previousScene')[0].getComponent(RenderSceneComponent);
     if (this.transition) {
       this.transition.stop();
+      this.transition._finish();
     }
     if (tween && MaterialFactory.materialGenerators[tween.transition]) {
       this.updateMaterial(tween.transition);
@@ -82,10 +83,12 @@ module.exports = class SlideRenderer extends Component {
         step: (state) => {
           this.slideRenderScene.setAttribute('progress', state.progress);
         },
+        finish: cb,
       });
     } else {
       this.slideRenderScene.setAttribute('progress', 1);
       this.updateCamera(currentCameraQuery, previousCameraQuery);
+      if (cb) { cb(); }
     }
   }
 

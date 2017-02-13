@@ -61,9 +61,10 @@ module.exports = class SlideManager extends Component {
     };
     const currentClearColor = currentPageScene.getAttribute('color');
     const previousClearColor = previousPageScene.getAttribute('color');
-    previousPageScene.node.emit('hide', this.number);
     slideRenderer.updateClearColor(currentClearColor, previousClearColor);
-    slideRenderer.transit(`#page${currentNumber}`, `#page${this.number}`, tween);
+    slideRenderer.transit(`#page${currentNumber}`, `#page${this.number}`, tween, () => {
+      previousPageScene.node.emit('hide', this.number);
+    });
     currentPageScene.node.emit('show', currentNumber);
     this.number += delta;
     this.build = 0;

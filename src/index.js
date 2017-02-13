@@ -1,5 +1,8 @@
 const gr = require('grimoirejs').default;
 
+const Tweenable = require('shifty');
+Tweenable.setBezierFunction('swifter', 0.4, 0, 0, 1);
+
 gr(() => {
   const $$ = gr('#canvas');
   $$('page').on('show', (i) => {

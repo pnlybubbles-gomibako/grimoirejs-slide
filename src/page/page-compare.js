@@ -7,65 +7,42 @@ require('./grimoire-main')('#compare-canvas', 'mesh');
 
 const $$ = gr('#canvas');
 
-const ace = require('brace');
-require('brace/mode/javascript');
 const editorConfig = [
   {
     id: 'jquery-editor',
     mode: 'javascript',
+    text: '',
   },
   {
     id: 'threejs-editor',
     mode: 'javascript',
+    text: '',
   },
   {
     id: 'grimoire-editor',
     mode: 'javascript',
+    text: '',
   },
 ];
-editorConfig.forEach((v) => {
-  $(`#${v.id}`).on('keyup', (e) => {
-    e.stopPropagation();
-  });
-});
-const editors = editorConfig.map((v) => ace.edit(v.id));
-editors.forEach((editor, i) => {
-  editor.getSession().setMode(`ace/mode/${editorConfig[i].mode}`);
-  editor.renderer.setShowGutter(false);
-  editor.setFontSize(30);
-});
+const editors = require('./editor-settings')(editorConfig);
 
 $$('.compare').on('show', () => {
+  $('#jquery-container').fadeIn(500, swifter);
+  $('#threejs-container').css({
+    left: '50%',
+  }).fadeIn(500, swifter);
 });
 $$('.compare').on('build', (i) => {
   switch (i) {
     case 1:
-      $('#jquery-container').fadeIn(500, swifter);
-      $('#threejs-container').css({
-        left: '50%',
-      }).fadeIn(500, swifter);
-      // $('#background .container').animate({
-      //   left: '25%',
-      //   right: 'auto',
-      // }, 500, swifter).promise().then((this_) => {
-      //   $(this_).css({
-      //     width: '50%',
-      //     left: 'auto',
-      //     right: 0,
-      //   });
-      //   $$('goml').single().getComponent('CanvasInitializer')._onWindowResize();
-      // });
-      break;
-    case 2:
       $('#jquery-container .flex').animate({
         height: 300,
       }, 500, swifter);
       $('#threejs-container .flex').animate({
         height: 300,
       }, 500, swifter);
-      // $('#compare-editors').delay(500).fadeIn(500, swifter);
       break;
-    case 3:
+    case 2:
       $('#jquery-container').animate({
         left: '-50%',
       }, 500, swifter);
@@ -80,11 +57,8 @@ $$('.compare').on('build', (i) => {
       }).show().animate({
         left: '50%',
       }, 500, swifter);
-      // $$('goml').single().getComponent('CanvasInitializer')._onWindowResize();
-      // $$('.compare').find('mesh').setAttribute('scale', 0.8); // find is not work?
-      // $$('.compare mesh').setAttribute('scale', 1.6);
       break;
-    case 4:
+    case 3:
       $('#threejs-container').css({
         transform: 'scale(1)',
       })
@@ -107,6 +81,10 @@ $$('.compare').on('build', (i) => {
         left: '0%',
       });
       break;
+    case 4:
+      $('.compare-container').fadeOut(500, swifter).promise().then(() => {
+        $$('.compare').single().getComponent('PageScene').operate(1);
+      });
   }
 });
 $$('.compare').on('hide', (i) => {

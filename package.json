@@ -9,7 +9,7 @@
     "brace": "^0.9.1",
     "grimoirejs": "^0.14.7",
     "grimoirejs-forward-shading": "^1.4.2",
-    "grimoirejs-fundamental": "^0.12.9",
+    "grimoirejs-fundamental": "^0.12.10",
     "grimoirejs-gltf": "^1.8.4",
     "grimoirejs-math": "^1.12.1",
     "grimoirejs-text": "^1.0.2",

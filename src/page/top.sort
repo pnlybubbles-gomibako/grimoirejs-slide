@@ -61,7 +61,7 @@
         float ease = pow(2.0, 20.0 * (r - 1.0));
         float y_move = -1.0 * move_max * ease + move_max * 0.5;
         float opacity = 1.0 - ease - pow(2.0, -30.0 * r);
-        float scale = 1.0 - 0.8 * rnd1 + 0.05 * sin(1.5 * _time * 0.001 + 6.282 / j);
+        float scale = 1.3 - 0.9 * rnd1 + 0.05 * sin(1.5 * _time * 0.001 + 6.282 / j);
         vec2 center = (uv + spawn_center + spawn + vec2(x_wave, y_move)) * scale;
         gl_FragColor = alphaBlend(gl_FragColor, vec4(vec3(1, 0.647, 0), 0.3 * opacity * drawRect(center, rect_size * -2.0, rect_size * 2.0, 0.1)));
         gl_FragColor = alphaBlend(gl_FragColor, vec4(vec3(0.0, 0.0, 0.0), 0.5 * opacity * drawRect(center, rect_size * -1.0, rect_size, 0.01)));

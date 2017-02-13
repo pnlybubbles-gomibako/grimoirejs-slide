@@ -6,23 +6,21 @@
     <object class="camera-origin">
       <camera/>
     </object>
-    <mesh geometry="quad" material="new(topShader)" scale="4" position="0,1,0"></mesh>
+    <mesh geometry="quad" material="new(topShader)" scale="7" position="0,2,0"></mesh>
     <mesh texture="src/page/logo.png" scale="3" position="0,0.5,-0.3" material="new(unlit)"></mesh>
     <mesh texture="src/page/self-intro.png" material="new(unlit)" rotation="y(180d)" position="0,0,0.5" scale="7,4,0"/>
-    <text text="Web開発のためのWebGLフレームワーク" textAlign="center" size="1" position="0,-2.5,0" color="#978b69" font="20pt ヒラギノ角ゴ Pro"></text>
+    <text text="Web開発のためのWebGLフレームワーク" textAlign="center" size="0.5" position="0.6,-2.5,0" color="#978b69" font="30pt ヒラギノ角ゴ Pro"></text>
   </page>
-  <page color="black" build="1" order="-10" class="fusion-page">
-    <camera aspect="1.6" orthogonal="true" orthoSize="5"/>
-    <mesh texture="src/page/web.png" position="4,1,3" scale="1.6,1,1" material="new(unlit)"/>
-    <mesh texture="src/page/unity.png" position="-4,1,3" scale="1.5" material="new(unlit)"/>
-    <mesh texture="src/page/logo.png" position="0,0,3" scale="1.5" material="new(unlit)" class="gr-logo" color="rgba(255,255,255,0)"/>
-    <mesh material="new(fusionShader)" class="fusion-shader" progress="0"/>
-  </page>
-  <page color="#5C3DA8" transition="slide" duration="1" easing="easeOutExpo">
+  <page color="#381794" transition="slide" duration="1" easing="easeOutExpo">
     <camera/>
-    <text text="WebGL" color="white" size="10" font="50pt Meiryo"/>
+    <text text="WebGL" color="#f9efd5" size="0.5" font="100pt Avenir" position="1,0,0"/>
   </page>
-  <page color="white" transition="slide" duration="1" easing="easeOutExpo">
+  <page class="webgl-shader" transition="slide" duration="1" easing="easeOutExpo">
+    <camera></camera>
+    <mesh material="new(spaceShader)"></mesh>
+    <!-- <text text="WebGL" color="#f9efd5" size="0.5" font="100pt Avenir" position="1,0,1"/> -->
+  </page>
+  <page transition="slide" duration="1" easing="easeOutExpo">
     <object>
       <object.components>
         <Rotate/>
@@ -34,11 +32,7 @@
     <mesh geometry="sphere" texture="src/page/3602.jpg" scale="10,10,-10" position="0,5,0" material="new(unlit)">
     </mesh>
   </page>
-  <page color="#f9efd5" class="webgl-shader" transition="slide" duration="1" easing="easeOutExpo">
-    <camera></camera>
-    <mesh material="new(spaceShader)"></mesh>
-  </page>
-  <page color="cyan" class="360-degree" transition="slide" duration="1" easing="easeOutExpo">
+  <page class="360-degree" transition="slide" duration="1" easing="easeOutExpo">
     <camera></camera>
     <mesh geometry="sphere" texture="src/page/360.jpg" scale="10,10,-10" material="new(unlit)">
       <mesh.components>
@@ -51,18 +45,25 @@
     <mesh geometry="cube" color="red"></mesh>
     <mesh class="mesh2" geometry="cube" color="blue" position="2,0,0"></mesh>
   </page> -->
-  <page class="compare" build="4" transition="push" duration="0.5" easing="easeOutExpo">
+  <page color="#f9efd5" class="compare" build="4" transition="push" duration="1" easing="easeOutExpo">
     <camera></camera>
     <mesh geometry="cube" scale="0"></mesh>
     <light type="directional"/>
   </page>
-  <page color="#f9efd5" class="editor" build="2" transition="push" duration="0.5" easing="easeOutExpo">
+  <page color="#f9efd5" class="editor" build="3" transition="push" duration="1" easing="easeOutExpo" order="1">
     <camera></camera>
     <light></light>
-    <text text="WebGLのためのマークアップ" font="Bold 20pt ヒラギノ角ゴ Pro" textAlign="center" position="0,3.5,0" color="#381794"></text>
+    <text text="WebGLのためのマークアップ" font="Bold 30pt ヒラギノ角ゴ Pro" size="0.5" textAlign="center" position="0.6,1.2,0" color="#381794"></text>
     <mesh diffuse="orange" geometry="cube" scale="0.5" id="cube"></mesh>
   </page>
-  <page color="#f9efd5" class="world" build="2" transition="push" duration="0.5" easing="easeOutExpo">
+  <page color="black" build="1" class="fusion-page">
+    <camera aspect="1.6" orthogonal="true" orthoSize="5"/>
+    <mesh texture="src/page/web.png" position="4,1,3" scale="1.6,1,1" material="new(unlit)"/>
+    <mesh texture="src/page/unity.png" position="-4,1,3" scale="1.5" material="new(unlit)"/>
+    <mesh texture="src/page/logo.png" position="0,0,3" scale="1.5" material="new(unlit)" class="gr-logo" color="rgba(255,255,255,0)"/>
+    <mesh material="new(fusionShader)" class="fusion-shader" progress="0"/>
+  </page>
+  <page color="#f9efd5" class="world" build="2" transition="push" duration="1" easing="easeOutExpo">
     <camera></camera>
     <light></light>
     <mesh diffuse="orange" geometry="cube" scale="0.5"></mesh>

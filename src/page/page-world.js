@@ -4,9 +4,6 @@ const {swifter} = require('./easing');
 
 const $$ = gr('#canvas');
 
-const ace = require('brace');
-require('brace/mode/javascript');
-require('brace/mode/xml');
 const editorConfig = [
   {
     id: 'component-editor',
@@ -19,19 +16,7 @@ const editorConfig = [
     text: 'hello xml',
   },
 ];
-editorConfig.forEach((v) => {
-  $(`#${v.id}`).on('keyup', (e) => {
-    e.stopPropagation();
-  });
-});
-const editors = editorConfig.map((v) => ace.edit(v.id));
-editors.forEach((editor, i) => {
-  editor.getSession().setMode(`ace/mode/${editorConfig[i].mode}`);
-  editor.renderer.setShowGutter(false);
-  editor.setFontSize(30);
-  editor.setValue(editorConfig[i].text);
-  editor.clearSelection();
-});
+const editors = require('./editor-settings')(editorConfig);
 
 {
   const mesh = $$('.world mesh');
@@ -54,8 +39,8 @@ $$('.world').on('build', (i) => {
   switch (i) {
     case 1:
       $('#background .container').animate({
-        top: -1 * document.body.clientHeight / 2 + 170,
-      });
+        top: '-30%',
+      }, 500, swifter);
       $('#world-container').delay(200).fadeIn(500, swifter);
       break;
     case 2:
