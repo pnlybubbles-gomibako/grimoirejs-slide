@@ -16,4 +16,5 @@ gr(() => {
   require('./page/opening-page');
   require('./page/page-compare');
   require('./page/page-editor');
+  require('./page/page-world');
 });

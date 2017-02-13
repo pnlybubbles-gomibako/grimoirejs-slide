@@ -52,7 +52,11 @@
     <light></light>
     <mesh diffuse="orange" geometry="cube" scale="0.5"></mesh>
   </page>
-
+  <page color="#f9efd5" class="world" build="3" order="1">
+    <camera></camera>
+    <light></light>
+    <mesh diffuse="orange" geometry="cube" scale="0.5"></mesh>
+  </page>
   <!-- <renderer>
     <texture-buffer name="current-buffer"></texture-buffer>
     <texture-buffer name="previous-buffer"></texture-buffer>
