@@ -9,7 +9,7 @@
     <mesh geometry="quad" material="new(topShader)" scale="7" position="0,2,0"></mesh>
     <mesh texture="src/page/logo.png" scale="3" position="0,0.5,-0.3" material="new(unlit)"></mesh>
     <mesh texture="src/page/self-intro.png" material="new(unlit)" rotation="y(180d)" position="0,0,0.5" scale="7,4,0"/>
-    <text text="Web開発のためのWebGLフレームワーク" textAlign="center" size="0.5" position="0.6,-2.5,0" color="#978b69" font="30pt ヒラギノ角ゴ Pro"></text>
+    <text text="Web開発のためのWebGLフレームワーク" textAlign="center" size="0.5" position="0.6,-2.5,0" color="#978b69" font="20pt Noto Sans CJK JP"></text>
   </page>
   <page color="#5C3DA8" class="webgl-start" transition="slide" duration="1" easing="swifter">
     <camera/>
@@ -46,7 +46,7 @@
   <page color="#f9efd5" class="editor" build="3" transition="push" duration="1" easing="swifter">
     <camera></camera>
     <light></light>
-    <text text="WebGLのためのマークアップ" font="Bold 30pt ヒラギノ角ゴ Pro" size="0.5" textAlign="center" position="0.6,1.2,0" color="#381794"></text>
+    <text text="WebGLのためのマークアップ" font="Bold 30pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.6,1.2,0" color="#381794"></text>
     <mesh diffuse="orange" geometry="cube" scale="0.5" id="cube"></mesh>
   </page>
   <page color="#f9efd5" class="world" build="2" transition="push" duration="1" easing="swifter">
