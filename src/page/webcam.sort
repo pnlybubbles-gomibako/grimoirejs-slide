@@ -1,0 +1,42 @@
+@Pass{
+FS_PREC(mediump,float)
+varying vec2 vUV;
+#ifdef VS
+  attribute vec3 position;
+
+  attribute vec2 texCoord;
+  void main(){
+    gl_Position = vec4(position,1);
+    vUV = texCoord;
+  }
+#endif
+
+#ifdef FS
+
+@AUDIO_FFT
+uniform sampler2D audio;
+
+@WEBCAM
+uniform sampler2D cam;
+
+@{type:"color",default:"lime"}
+uniform vec3 baseColor;
+
+vec4 transition(vec4 c1,vec4 c2,float t){
+  return (c2 - c1) * t + c1;
+}
+
+ void main() {
+   vec2 uv = vUV;
+   vec2 audioUV = uv * vec2(2,1);
+   if(audioUV.x < 1.){
+       audioUV.x = 1. - audioUV.x;
+   }
+   vec4 audio = texture2D(audio,audioUV);
+   vec3 original = texture2D(cam,uv).rgb;
+   vec3 color = original;
+   color = vec3(1.0 - length(color)) * baseColor;
+   gl_FragColor = vec4(mix(original,color,step(length(audio)/4.0,abs(1.0 - vUV.y - 0.5))),1);
+ }
+#endif
+}
