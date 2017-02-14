@@ -2,7 +2,7 @@ const $ = require('jquery');
 const gr = require('grimoirejs').default;
 const { Color4 } = require('grimoirejs-math').default;
 const $$ = gr('#slide');
-const {swifter} = require('./easing');
+const { swifter } = require('./easing');
 
 module.exports = (container, page, slideCount) => {
   return {

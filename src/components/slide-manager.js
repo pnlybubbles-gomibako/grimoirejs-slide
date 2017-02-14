@@ -70,19 +70,19 @@ module.exports = class SlideManager extends Component {
   update() {
     this.pages = this.node.children.map((v) => {
       return v.getComponent('PageScene');
-    }).filter((v) => v).sort((a, b) => {
-      const aa = parseInt(a.getAttribute('order'), 10);
-      const bb = parseInt(b.getAttribute('order'), 10);
-      if (isNaN(aa) && isNaN(bb)) {
-        return 0;
-      } else if (isNaN(aa)) {
-        return 1;
-      } else if (isNaN(bb)) {
-        return -1;
-      } else {
-        return aa - bb;
-      }
-    });
+    }).filter((v) => v)//.sort((a, b) => {
+    //   const aa = parseInt(a.getAttribute('order'), 10);
+    //   const bb = parseInt(b.getAttribute('order'), 10);
+    //   if (isNaN(aa) && isNaN(bb)) {
+    //     return 0;
+    //   } else if (isNaN(aa)) {
+    //     return 1;
+    //   } else if (isNaN(bb)) {
+    //     return -1;
+    //   } else {
+    //     return aa - bb;
+    //   }
+    // });
     this.pages.forEach((v, i) => {
       v.node.getComponentsInChildren(CameraComponent)[0].node.setAttribute('id', `page${i}`); // temporary avoid bugs
     });
