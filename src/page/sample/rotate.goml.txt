@@ -1,0 +1,7 @@
+<goml>
+  <scene>
+    <camera></camera>
+    <light></light>
+    <mesh diffuse="orange" geometry="cube" scale="0.5"></mesh>
+  </scene>
+</goml>

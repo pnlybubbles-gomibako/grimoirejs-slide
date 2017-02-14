@@ -1,8 +1,7 @@
-$(function(){
-  $("div").on("mouseenter",function(){
-    $("div").attr("color","blue");
-  });
-  $("div").on("mouseleave",function(){
-    $("div").attr("color","orange");
-  });
+$("div").on("mouseenter",function(){
+  $("div").attr("color","blue");
+});
+
+$("div").on("mouseleave",function(){
+  $("div").attr("color","orange");
 });

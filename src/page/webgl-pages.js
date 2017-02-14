@@ -31,7 +31,6 @@ $$('.webgl-end').on('show', (_, delta) => {
 });
 
 $$('.webgl-end').on('hide', (_, delta) => {
-  console.log('hide webgl-end', delta);
   if (delta > 0) {
     $('.webgl-caption-container').removeAttr('style');
   }

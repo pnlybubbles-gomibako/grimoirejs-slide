@@ -12,7 +12,7 @@
     "grimoirejs-fundamental": "^0.12.10",
     "grimoirejs-gltf": "^1.8.4",
     "grimoirejs-math": "^1.12.1",
-    "grimoirejs-text": "^1.0.2",
+    "grimoirejs-text": "^1.0.5",
     "jquery": "^3.1.1",
     "regenerator-runtime": "^0.10.1",
     "shifty": "^1.5.4",

@@ -8,7 +8,7 @@ const $$ = gr('#slide');
 const editorConfig = [
   {
     id: 'xml-editor',
-    text: require('./sample/sample-change-color.goml.txt'),
+    text: require('./sample/change-color.goml.txt'),
     mode: 'xml',
   },
   {
@@ -33,7 +33,7 @@ $('#overlay').on('mouseenter', $$('renderer').single().getComponent('Renderer').
   rotate();
 }
 
-$('#editor-container .xml .run').on('click', (this_) => {
+$('#editor-container .left .run').on('click', (this_) => {
   const text = editors[0].getValue();
   const parsed = (new DOMParser).parseFromString(text, 'application/xml').documentElement;
   const scene = parsed.querySelector('scene');
@@ -50,7 +50,7 @@ $('#editor-container .xml .run').on('click', (this_) => {
   });
 });
 
-$('#editor-container .js .run').on('click', (this_) => {
+$('#editor-container .right .run').on('click', (this_) => {
   const text = editors[1].getValue();
   eval(text);
 });

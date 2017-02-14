@@ -27,10 +27,10 @@ const editorConfig = [
 const editors = require('./editor-settings')(editorConfig);
 
 $$('.compare').on('show', () => {
-  $('#jquery-container').stop(false, true).fadeIn(500, swifter);
+  $('#jquery-container').stop(false, true).delay(700).fadeIn(500, swifter);
   $('#threejs-container').css({
     left: '50%',
-  }).stop(false, true).fadeIn(500, swifter);
+  }).stop(false, true).delay(700).fadeIn(500, swifter);
 });
 $$('.compare').on('build', (i) => {
   switch (i) {

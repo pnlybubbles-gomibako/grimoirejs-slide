@@ -46,10 +46,10 @@
   <page color="#f9efd5" class="editor" build="3" transition="push" duration="1" easing="swifter">
     <camera></camera>
     <light></light>
-    <text text="WebGLのためのマークアップ" font="Bold 30pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.6,1.2,0" color="#381794"></text>
+    <text text="WebGLのためのマークアップ" font="Bold 30pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,1.2,0" color="#381794"></text>
     <mesh diffuse="orange" geometry="cube" scale="0.5" id="cube"></mesh>
   </page>
-  <page color="#f9efd5" class="world" build="2" transition="push" duration="1" easing="swifter">
+  <page color="#f9efd5" class="world" build="3" transition="noise" duration="2" easing="swifter">
     <camera></camera>
     <light></light>
     <mesh diffuse="orange" geometry="cube" scale="0.5"></mesh>
