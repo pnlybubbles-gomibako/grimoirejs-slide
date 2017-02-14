@@ -6,6 +6,7 @@ html, body
 
 body
   background-color #f9efd5
+  font-family 'Avenir', 'Noto Sans CJK JP'
 
 #background
   position relative
@@ -37,3 +38,13 @@ body
 
 .ace-tm
   background-color rgba(0, 0, 0, 0.03) !important
+
+.ace_gutter
+  background rgba(0, 0, 0, 0.15) !important
+
+.ace_scrollbar
+  transition opacity 0.5s
+  opacity 0
+
+.ace_editor:hover .ace_scrollbar
+  opacity 1

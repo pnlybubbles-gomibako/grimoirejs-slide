@@ -1,7 +1,6 @@
 const gr = require('grimoirejs').default;
 
-const Tweenable = require('shifty');
-Tweenable.setBezierFunction('swifter', 0.4, 0, 0, 1);
+require('./page/shifty-easing');
 
 gr(() => {
   const $$ = gr('#slide');

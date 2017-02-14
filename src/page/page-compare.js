@@ -27,26 +27,26 @@ const editorConfig = [
 const editors = require('./editor-settings')(editorConfig);
 
 $$('.compare').on('show', () => {
-  $('#jquery-container').fadeIn(500, swifter);
+  $('#jquery-container').stop(false, true).delay(700).fadeIn(500, swifter);
   $('#threejs-container').css({
     left: '50%',
-  }).fadeIn(500, swifter);
+  }).stop(false, true).delay(700).fadeIn(500, swifter);
 });
 $$('.compare').on('build', (i) => {
   switch (i) {
     case 1:
-      $('#jquery-container .flex').animate({
+      $('#jquery-container .flex').stop(false, true).animate({
         height: 300,
       }, 500, swifter);
-      $('#threejs-container .flex').animate({
+      $('#threejs-container .flex').stop(false, true).animate({
         height: 300,
       }, 500, swifter);
       break;
     case 2:
-      $('#jquery-container').animate({
+      $('#jquery-container').stop(false, true).animate({
         left: '-50%',
       }, 500, swifter);
-      $('#threejs-container').animate({
+      $('#threejs-container').stop(false, true).animate({
         left: '0%',
       }, 500, swifter);
       $('#grimoire-container .flex').css({
@@ -54,7 +54,7 @@ $$('.compare').on('build', (i) => {
       });
       $('#grimoire-container').css({
         left: '100%',
-      }).show().animate({
+      }).show().stop(false, true).animate({
         left: '50%',
       }, 500, swifter);
       break;
@@ -64,7 +64,7 @@ $$('.compare').on('build', (i) => {
       })
       $({
         scale: 1,
-      }).animate({
+      }).stop(false, true).animate({
         scale: 0.3,
       }, {
         duration: 500,
@@ -76,19 +76,18 @@ $$('.compare').on('build', (i) => {
         },
         queue: false,
       })
-      $('#threejs-container').fadeOut(500, swifter);
-      $('#jquery-container').delay(200).animate({
+      $('#threejs-container').stop(false, true).fadeOut(500, swifter);
+      $('#jquery-container').delay(200).stop(false, true).animate({
         left: '0%',
       });
       break;
     case 4:
-      $('.compare-container').fadeOut(500, swifter).promise().then(() => {
+      $('.compare-container').stop(false, true).fadeOut(500, swifter).promise().then(() => {
         $$('.compare').single().getComponent('PageScene').operate(1);
       });
   }
 });
 $$('.compare').on('hide', (i) => {
-  console.log('hide compare');
   // $('#background .container').removeAttr('style');
   $('.compare-container').hide().removeAttr('style');
   $('.compare-container .flex').removeAttr('style');

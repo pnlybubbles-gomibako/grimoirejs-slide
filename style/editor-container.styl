@@ -1,34 +1,11 @@
 @import 'partials/button'
+@import 'partials/editor'
 
 #editor-container
-  position absolute
-  height 67%
-  width 100%
-  top 33%
+  editor()
 
-  .run
-    position absolute
-    bottom 102%
+  .left
+    left 2%
 
-    button(#381794, #f9efd5)
-    font-size 2vh
-
-  .wrap
-    position relative
-    height 100%
-    width 100%
-
-    > div
-      position absolute
-      height 98%
-      width 96%
-
-    .xml
-      left 2%
-
-    .js
-      left 102%
-
-    .editor
-      height 100%
-      width 100%
+  .right
+    left 102%

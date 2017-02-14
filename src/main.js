@@ -26,5 +26,6 @@ gr.register(async () => {
   gr.overrideDeclaration('goml', ['SlideManager']);
   gr.registerNode('page', ['PageScene'], {}, 'scene');
   gr.registerNode('slide-render-scene', ['MaterialContainer', 'SlideRenderScene'], {});
+  gr.overrideDeclaration('mesh', [], { specularRatio: 0 });
   require("./components/webcam");
 });
