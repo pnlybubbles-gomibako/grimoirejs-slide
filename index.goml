@@ -2,6 +2,7 @@
   <import-material typeName="topShader" src="./src/page/top.sort"></import-material>
   <import-material typeName="spaceShader" src="./src/page/space.sort"></import-material>
   <import-material typeName="fusionShader" src="./src/page/fusion.sort"></import-material>
+  <import-material typeName="webcamShader" src="./src/page/webcam.sort"></import-material>
   <page color="#f9efd5" transition="noise" duration="1" class="opening" build="2">
     <object class="camera-origin">
       <camera/>
@@ -29,6 +30,10 @@
   <page class="webgl-shader" transition="slide" duration="1" easing="swifter">
     <camera></camera>
     <mesh material="new(spaceShader)"></mesh>
+  </page>
+  <page class="webcam-shader">
+    <camera></camera>
+    <mesh material="new(webcamShader)"></mesh>
   </page>
   <page color="cyan" class="360-degree webgl-end" transition="push" duration="1" easing="swifter" build="1">
     <camera></camera>
