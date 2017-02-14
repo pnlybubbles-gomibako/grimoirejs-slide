@@ -2,7 +2,7 @@ const gr = require('grimoirejs').default;
 const $ = require('jquery');
 const {swifter} = require('./easing');
 
-const $$ = gr('#canvas');
+const $$ = gr('#slide');
 
 const editorConfig = [
   {

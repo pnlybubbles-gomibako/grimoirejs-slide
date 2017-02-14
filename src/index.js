@@ -3,7 +3,7 @@ const gr = require('grimoirejs').default;
 require('./page/shifty-easing');
 
 gr(() => {
-  const $$ = gr('#canvas');
+  const $$ = gr('#slide');
   $$('page').on('show', (i, delta) => {
     console.log(`show ${i}: ${delta}`);
   });

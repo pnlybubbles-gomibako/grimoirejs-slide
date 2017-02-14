@@ -13,7 +13,7 @@ module.exports = (editorConfig) => {
   editors.forEach((editor, i) => {
     // require(`brace/mode/${editorConfig[i].mode}`);
     editor.getSession().setMode(`ace/mode/${editorConfig[i].mode}`);
-    editor.renderer.setShowGutter(false);
+    // editor.renderer.setShowGutter(false);
     editor.setValue(editorConfig[i].text);
     editor.clearSelection();
     editor.setOptions({

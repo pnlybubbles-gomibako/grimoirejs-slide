@@ -5,23 +5,23 @@ require('./threejs-main')('#threejs-container .box', 512, 512);
 require('./jquery-main')('#jquery-container .box');
 require('./grimoire-main')('#compare-canvas', 'mesh');
 
-const $$ = gr('#canvas');
+const $$ = gr('#slide');
 
 const editorConfig = [
   {
     id: 'jquery-editor',
     mode: 'javascript',
-    text: '',
+    text: require('./sample/jquery-div-color.txt'),
   },
   {
     id: 'threejs-editor',
     mode: 'javascript',
-    text: '',
+    text: require('./sample/three-color.txt'),
   },
   {
     id: 'grimoire-editor',
     mode: 'javascript',
-    text: '',
+    text: require('./sample/grimoire-color.txt'),
   },
 ];
 const editors = require('./editor-settings')(editorConfig);
