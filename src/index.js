@@ -18,4 +18,5 @@ gr(() => {
   require('./page/page-editor');
   require('./page/page-world');
   require('./page/fusion-page');
+  require('./page/webgl-pages');
 });

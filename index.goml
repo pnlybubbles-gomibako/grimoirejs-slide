@@ -2,7 +2,7 @@
   <import-material typeName="topShader" src="./src/page/top.sort"></import-material>
   <import-material typeName="spaceShader" src="./src/page/space.sort"></import-material>
   <import-material typeName="fusionShader" src="./src/page/fusion.sort"></import-material>
-  <page color="#f9efd5" transition="noise" duration="2" class="opening" build="2">
+  <page color="#f9efd5" transition="noise" duration="1" class="opening" build="2">
     <object class="camera-origin">
       <camera/>
     </object>
@@ -11,16 +11,8 @@
     <mesh texture="src/page/self-intro.png" material="new(unlit)" rotation="y(180d)" position="0,0,0.5" scale="7,4,0"/>
     <text text="Web開発のためのWebGLフレームワーク" size="1" position="0.2,-2.5,0" color="#978b69" font="20pt ヒラギノ角ゴ"></text>
   </page>
-  <page color="black" build="1" order="-10" class="fusion-page">
-    <camera aspect="1.6" orthogonal="true" orthoSize="5"/>
-    <mesh texture="src/page/web.png" position="4,1,3" scale="1.6,1,1" material="new(unlit)"/>
-    <mesh texture="src/page/unity.png" position="-4,1,3" scale="1.5" material="new(unlit)"/>
-    <mesh texture="src/page/logo.png" position="0,0,3" scale="1.5" material="new(unlit)" class="gr-logo" color="rgba(255,255,255,0)"/>
-    <mesh material="new(fusionShader)" class="fusion-shader" progress="0"/>
-  </page>
-  <page color="#5C3DA8">
+  <page color="#5C3DA8" class="webgl-start">
     <camera/>
-    <text text="WebGL" color="white" size="10" font="50pt Meiryo"/>
   </page>
   <page color="white">
     <object>
@@ -38,7 +30,7 @@
     <camera></camera>
     <mesh material="new(spaceShader)"></mesh>
   </page>
-  <page color="cyan" class="360-degree">
+  <page color="cyan" class="360-degree webgl-end">
     <camera></camera>
     <mesh geometry="sphere" texture="src/page/360.jpg" scale="10,10,-10" material="new(unlit)">
       <mesh.components>
@@ -61,10 +53,17 @@
     <light></light>
     <mesh diffuse="orange" geometry="cube" scale="0.5"></mesh>
   </page>
-  <page color="#f9efd5" class="world" build="3" order="1">
+  <page color="#f9efd5" class="world" build="3">
     <camera></camera>
     <light></light>
     <mesh diffuse="orange" geometry="cube" scale="0.5"></mesh>
+  </page>
+  <page color="black" build="1" class="fusion-page">
+    <camera aspect="1.6" orthogonal="true" orthoSize="5"/>
+    <mesh texture="src/page/web.png" position="4,1,3" scale="1.6,1,1" material="new(unlit)"/>
+    <mesh texture="src/page/unity.png" position="-4,1,3" scale="1.5" material="new(unlit)"/>
+    <mesh texture="src/page/logo.png" position="0,0,3" scale="1.5" material="new(unlit)" class="gr-logo" color="rgba(255,255,255,0)"/>
+    <mesh material="new(fusionShader)" class="fusion-shader" progress="0"/>
   </page>
   <!-- <renderer>
     <texture-buffer name="current-buffer"></texture-buffer>
