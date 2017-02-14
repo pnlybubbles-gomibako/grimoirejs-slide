@@ -10,6 +10,11 @@ const editorConfig = [
     mode: 'xml',
   },
   {
+    id: 'html-editor',
+    text: require('./sample/change-color.html.txt'),
+    mode: 'html',
+  },
+  {
     id: 'js-editor',
     mode: 'javascript',
     text: 'alert("hello world");',
@@ -56,9 +61,22 @@ $('#editor-container .right .run').on('click', (this_) => {
 $$('.editor').on('show', () => {
 });
 
-const editorBuild = require('./editor-build')('#editor-container', '.editor');
+const editorBuild = require('./editor-build')('#editor-container', '.editor', 3);
 $$('.editor').on('build', (i) => {
-  editorBuild.build(i);
+  switch (i) {
+    case 3:
+      $(`#editor-container .wrap`).stop(false, true).animate({
+        left: '0%',
+      });
+      break;
+    case 4:
+      $(`#editor-container .wrap`).stop(false, true).animate({
+        left: '-200%',
+      });
+      break;
+    default:
+      editorBuild.build(i);
+  }
 });
 
 

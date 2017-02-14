@@ -1,0 +1,5 @@
+<html>
+<body>
+  <script type="text/goml" src="index.goml" id="slide"></script>
+</body>
+</html>

@@ -47,7 +47,7 @@ $('#world-container .right .run').on('click', (this_) => {
 $$('.world').on('show', () => {
 });
 
-const editorBuild = require('./editor-build')('#world-container', '.world');
+const editorBuild = require('./editor-build')('#world-container', '.world', 1);
 $$('.world').on('build', (i) => {
   editorBuild.build(i);
 });

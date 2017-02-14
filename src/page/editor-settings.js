@@ -2,6 +2,7 @@ const $ = require('jquery');
 const ace = require('brace');
 require('brace/mode/javascript');
 require('brace/mode/xml');
+require('brace/mode/html');
 
 module.exports = (editorConfig) => {
   editorConfig.forEach((v) => {
