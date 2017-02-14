@@ -48,13 +48,13 @@
     <mesh geometry="cube" scale="0"></mesh>
     <light type="directional"/>
   </page>
-  <page color="#f9efd5" class="editor" build="3" transition="push" duration="1" easing="swifter" order="1">
+  <page color="#f9efd5" class="editor" build="3" transition="push" duration="1" easing="swifter">
     <camera></camera>
     <light></light>
     <text text="WebGLのためのマークアップ" font="Bold 30pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,1.4,0" color="#381794"></text>
     <mesh diffuse="orange" geometry="cube" scale="0.5" id="cube"></mesh>
   </page>
-  <page color="#f9efd5" class="world" build="3" transition="noise" duration="2" easing="swifter" order="1">
+  <page color="#f9efd5" class="world" build="3" transition="noise" duration="2" easing="swifter">
     <camera></camera>
     <light></light>
     <text text="Grimoire.jsのもう一つの機能、拡張性" font="Bold 30pt Noto Sans CJK JP" size="0.5" textAlign="center" position="1,1.4,0" color="#381794"></text>

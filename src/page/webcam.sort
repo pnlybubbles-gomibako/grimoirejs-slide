@@ -22,10 +22,6 @@ uniform sampler2D cam;
 @{type:"color",default:"lime"}
 uniform vec3 baseColor;
 
-vec4 transition(vec4 c1,vec4 c2,float t){
-  return (c2 - c1) * t + c1;
-}
-
  void main() {
    vec2 uv = vUV;
    vec2 audioUV = uv * vec2(2,1);

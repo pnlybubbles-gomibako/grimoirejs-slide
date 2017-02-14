@@ -38,9 +38,6 @@ var UniformResolverRegistry = gr.lib.fundamental.Material.UniformResolverRegistr
 UniformResolverRegistry.add("AUDIO_FFT", (valInfo) => (proxy, args) => {
   proxy.uniformTexture2D(valInfo.name,audioTexture);
 });
-
-gr.overrideDeclaration("goml",["WebAudioShaderResource"]);
-
 var webcamTexture,video;
 gr.registerComponent("WebcamShaderResource", {
     attributes: {
@@ -58,7 +55,6 @@ gr.registerComponent("WebcamShaderResource", {
                 const onStart = function() {
                     video.removeEventListener('canplay',onStart, true);
                     video.play();
-
                 };
                 video.addEventListener('canplay', onStart, true);
                 video.src = url.createObjectURL(localMediaStream);
@@ -72,8 +68,6 @@ gr.registerComponent("WebcamShaderResource", {
         },1000);
     }
 });
-
-gr.overrideDeclaration("goml",["WebcamShaderResource"]);
 
 UniformResolverRegistry.add("WEBCAM", (valInfo) => (proxy, args) => {
   proxy.uniformTexture2D(valInfo.name,webcamTexture);
