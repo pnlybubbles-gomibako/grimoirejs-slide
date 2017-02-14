@@ -1,7 +1,5 @@
 const gr = require('grimoirejs').default;
 const $ = require('jquery');
-const {swifter} = require('./easing');
-const Tweenable = require('shifty');
 
 const $$ = gr('#slide');
 
@@ -58,46 +56,13 @@ $('#editor-container .right .run').on('click', (this_) => {
 $$('.editor').on('show', () => {
 });
 
+const editorBuild = require('./editor-build')('#editor-container', '.editor');
 $$('.editor').on('build', (i) => {
-  switch (i) {
-    case 1:
-      // const dp = $$('.editor text').getAttribute('position');
-      // (new Tweenable()).tween({
-      //   from: {
-      //     x: 0, y: 0, z: 0,
-      //   },
-      //   to: {
-      //     x: -5, y: -0.1, z: -3,
-      //   },
-      //   duration: 500,
-      //   easing: 'swifter',
-      //   step(s) {
-      //     $$('.editor text').setAttribute('position', `${dp.X + s.x},${dp.Y + s.y},${dp.Z + s.z}`);
-      //   },
-      // });
-      $('#background .container').stop(false, true).animate({
-        top: '-30%',
-      }, 500, swifter);
-      $('#editor-container').delay(200).stop(false, true).fadeIn(500, swifter);
-      break;
-    case 2:
-      $('#editor-container .wrap').stop(false, true).animate({
-        left: '-100%',
-      });
-      break;
-    case 3:
-      $('#background .container').stop(false, true).animate({
-        top: 0,
-      }, 500, swifter);
-      $('#editor-container').stop(false, true).fadeOut(500, swifter)
-      $$('.editor').single().getComponent('PageScene').operate(1);
-      break;
-  }
+  editorBuild.build(i);
 });
+
 
 $$('.editor').on('hide', (i) => {
   $$('.editor mesh').setAttribute('diffuse', 'orange');
-  $('#editor-container').hide().removeAttr('style');
-  $('#editor-container .wrap').removeAttr('style');
-  $('#background .container').removeAttr('style');
+  editorBuild.reset();
 });

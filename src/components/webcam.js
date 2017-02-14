@@ -76,6 +76,5 @@ gr.registerComponent("WebcamShaderResource", {
 gr.overrideDeclaration("goml",["WebcamShaderResource"]);
 
 UniformResolverRegistry.add("WEBCAM", (valInfo) => (proxy, args) => {
-  debugger;
   proxy.uniformTexture2D(valInfo.name,webcamTexture);
 });
