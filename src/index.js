@@ -23,4 +23,5 @@ gr(() => {
   require('./page/page-world');
   require('./page/fusion-page');
   require('./page/webgl-pages');
+  require('./page/page-model');
 });

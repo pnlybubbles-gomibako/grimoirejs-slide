@@ -1,6 +1,5 @@
 const gr = require('grimoirejs').default;
 const $ = require('jquery');
-const {swifter} = require('./easing');
 
 const $$ = gr('#slide');
 
@@ -48,32 +47,12 @@ $('#world-container .right .run').on('click', (this_) => {
 $$('.world').on('show', () => {
 });
 
+const editorBuild = require('./editor-build')('#world-container', '.world', 1);
 $$('.world').on('build', (i) => {
-  switch (i) {
-    case 1:
-      $('#background .container').stop(false, true).animate({
-        top: '-30%',
-      }, 500, swifter);
-      $('#world-container').delay(200).stop(false, true).fadeIn(500, swifter);
-      break;
-    case 2:
-      $('#world-container .wrap').stop(false, true).animate({
-        left: '-100%',
-      });
-      break;
-    case 3:
-      $('#background .container').stop(false, true).animate({
-        top: 0,
-      }, 500, swifter);
-      $('#world-container').stop(false, true).fadeOut(500, swifter)
-      $$('.world').single().getComponent('PageScene').operate(1);
-      break;
-  }
+  editorBuild.build(i);
 });
 
 $$('.world').on('hide', (i) => {
   $$('.world mesh').setAttribute('diffuse', 'orange');
-  $('#world-container').hide().removeAttr('style');
-  $('#world-container .wrap').removeAttr('style');
-  $('#background .container').removeAttr('style');
+  editorBuild.reset();
 });

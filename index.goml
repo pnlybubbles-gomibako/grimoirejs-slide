@@ -48,16 +48,29 @@
     <mesh geometry="cube" scale="0"></mesh>
     <light type="directional"/>
   </page>
-  <page color="#f9efd5" class="editor" build="3" transition="push" duration="1" easing="swifter">
+  <page color="#f9efd5" class="editor" build="5" transition="push" duration="1" easing="swifter">
     <camera></camera>
     <light></light>
-    <text text="WebGLのためのマークアップ" font="Bold 30pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,1.2,0" color="#381794"></text>
+    <text text="WebGLのためのマークアップ" font="Bold 30pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,1.4,0" color="#381794"></text>
     <mesh diffuse="orange" geometry="cube" scale="0.5" id="cube"></mesh>
   </page>
-  <page color="#f9efd5" class="world" build="3" transition="noise" duration="2" easing="swifter">
+  <page color="#f9efd5" class="world" build="3" transition="push" duration="2" easing="swifter">
     <camera></camera>
     <light></light>
+    <text text="Grimoire.jsのもう一つの機能、拡張性" font="Bold 30pt Noto Sans CJK JP" size="0.5" textAlign="center" position="1,1.4,0" color="#381794"></text>
     <mesh diffuse="orange" geometry="cube" scale="0.5"></mesh>
+  </page>
+  <page class="model" transition="noise" duration="1" easing="swifter" order="1">
+    <object>
+      <object.components>
+        <Rotate/>
+      </object.components>
+      <camera far="200" position="0,1,2" rotation="x(-20d)"/>
+    </object>
+    <model src="src/page/BrainStem.glb" scale="0.5"/>
+    <mesh rotation="x(-90d)" texture="src/page/logo.png" scale="3" material="new(unlit)"/>
+    <mesh geometry="sphere" texture="src/page/3602.jpg" scale="10,10,-10" position="0,5,0" material="new(unlit)">
+    </mesh>
   </page>
   <page color="black" build="1" class="fusion-page">
     <camera aspect="1.6" orthogonal="true" orthoSize="5"/>
