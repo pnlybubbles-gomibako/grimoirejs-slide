@@ -14,6 +14,8 @@ gr(() => {
   $$('page').on('build', (i) => {
     console.log(`build ${i}`);
   });
+  $$("goml").addComponent("WebAudioShaderResource");
+  $$("goml").addComponent("WebcamShaderResource");
 
   // pages
   require('./page/opening-page');
