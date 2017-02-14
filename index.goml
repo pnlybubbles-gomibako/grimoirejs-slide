@@ -11,10 +11,10 @@
     <mesh texture="src/page/self-intro.png" material="new(unlit)" rotation="y(180d)" position="0,0,0.5" scale="7,4,0"/>
     <text text="Web開発のためのWebGLフレームワーク" textAlign="center" size="0.5" position="0.6,-2.5,0" color="#978b69" font="30pt ヒラギノ角ゴ Pro"></text>
   </page>
-  <page color="#5C3DA8" class="webgl-start" transition="slide" duration="1" easing="easeOutExpo">
+  <page color="#5C3DA8" class="webgl-start" transition="slide" duration="1" easing="swifter">
     <camera/>
   </page>
-  <page transition="slide" duration="1" easing="easeOutExpo">
+  <page transition="slide" duration="1" easing="swifter">
     <object>
       <object.components>
         <Rotate/>
@@ -26,11 +26,11 @@
     <mesh geometry="sphere" texture="src/page/3602.jpg" scale="10,10,-10" position="0,5,0" material="new(unlit)">
     </mesh>
   </page>
-  <page class="webgl-shader" transition="slide" duration="1" easing="easeOutExpo">
+  <page class="webgl-shader" transition="slide" duration="1" easing="swifter">
     <camera></camera>
     <mesh material="new(spaceShader)"></mesh>
   </page>
-  <page color="cyan" class="360-degree webgl-end" transition="slide" duration="1" easing="easeOutExpo">
+  <page color="cyan" class="360-degree webgl-end" transition="push" duration="1" easing="swifter" build="1">
     <camera></camera>
     <mesh geometry="sphere" texture="src/page/360.jpg" scale="10,10,-10" material="new(unlit)">
       <mesh.components>
@@ -38,30 +38,18 @@
       </mesh.components>
     </mesh>
   </page>
-  <!-- <page color="#381794" duration="1" easing="easeOutExpo" build="1">
-    <camera></camera>
-    <mesh geometry="cube" color="red"></mesh>
-    <mesh class="mesh2" geometry="cube" color="blue" position="2,0,0"></mesh>
-  </page> -->
-  <page color="#f9efd5" class="compare" build="4" transition="push" duration="1" easing="easeOutExpo">
+  <page color="#f9efd5" class="compare" build="4" transition="push" duration="1" easing="swifter">
     <camera></camera>
     <mesh geometry="cube" scale="0"></mesh>
     <light type="directional"/>
   </page>
-  <page color="#f9efd5" class="editor" build="3" transition="push" duration="1" easing="easeOutExpo" order="1">
+  <page color="#f9efd5" class="editor" build="3" transition="push" duration="1" easing="swifter">
     <camera></camera>
     <light></light>
     <text text="WebGLのためのマークアップ" font="Bold 30pt ヒラギノ角ゴ Pro" size="0.5" textAlign="center" position="0.6,1.2,0" color="#381794"></text>
     <mesh diffuse="orange" geometry="cube" scale="0.5" id="cube"></mesh>
   </page>
-  <page color="black" build="1" class="fusion-page">
-    <camera aspect="1.6" orthogonal="true" orthoSize="5"/>
-    <mesh texture="src/page/web.png" position="4,1,3" scale="1.6,1,1" material="new(unlit)"/>
-    <mesh texture="src/page/unity.png" position="-4,1,3" scale="1.5" material="new(unlit)"/>
-    <mesh texture="src/page/logo.png" position="0,0,3" scale="1.5" material="new(unlit)" class="gr-logo" color="rgba(255,255,255,0)"/>
-    <mesh material="new(fusionShader)" class="fusion-shader" progress="0"/>
-  </page>
-  <page color="#f9efd5" class="world" build="2" transition="push" duration="1" easing="easeOutExpo">
+  <page color="#f9efd5" class="world" build="2" transition="push" duration="1" easing="swifter">
     <camera></camera>
     <light></light>
     <mesh diffuse="orange" geometry="cube" scale="0.5"></mesh>

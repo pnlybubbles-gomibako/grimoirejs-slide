@@ -5,14 +5,14 @@ Tweenable.setBezierFunction('swifter', 0.4, 0, 0, 1);
 
 gr(() => {
   const $$ = gr('#canvas');
-  $$('page').on('show', (i) => {
-    console.log(`show ${i}`);
+  $$('page').on('show', (i, delta) => {
+    console.log(`show ${i}: ${delta}`);
   });
-  $$('page').on('hide', (i) => {
-    console.log(`hide ${i}`);
+  $$('page').on('hide', (i, delta) => {
+    console.log(`hide ${i}: ${delta}`);
   });
   $$('page').on('build', (i) => {
-    console.log(i);
+    console.log(`build ${i}`);
   });
 
   // pages

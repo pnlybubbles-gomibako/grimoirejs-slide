@@ -44,15 +44,12 @@ module.exports = class SlideManager extends Component {
     });
   }
 
-  operateBuild(delta) {
-
-  }
-
   operate(delta) {
     const slideRenderer = this.node.getComponentsInChildren('SlideRenderer')[0];
-    const currentNumber = this.number + delta;
+    const previousNumber = this.number;
+    const currentNumber = previousNumber + delta;
     const currentPageScene = this.pages[currentNumber];
-    const previousPageScene = this.pages[this.number];
+    const previousPageScene = this.pages[previousNumber];
     if (!currentPageScene) { return; }
     const tween = delta !== 1 ? null : {
       transition: `transition-${previousPageScene.getAttribute('transition')}`,
@@ -62,10 +59,10 @@ module.exports = class SlideManager extends Component {
     const currentClearColor = currentPageScene.getAttribute('color');
     const previousClearColor = previousPageScene.getAttribute('color');
     slideRenderer.updateClearColor(currentClearColor, previousClearColor);
-    slideRenderer.transit(`#page${currentNumber}`, `#page${this.number}`, tween, () => {
-      previousPageScene.node.emit('hide', this.number);
+    slideRenderer.transit(`#page${currentNumber}`, `#page${previousNumber}`, tween, () => {
+      previousPageScene.node.emit('hide', previousNumber, delta);
     });
-    currentPageScene.node.emit('show', currentNumber);
+    currentPageScene.node.emit('show', currentNumber, delta);
     this.number += delta;
     this.build = 0;
   }
