@@ -30,23 +30,27 @@ const editors = require('./editor-settings')(editorConfig);
 }
 
 $$('.world').on('show', () => {
-  $('body').css({
-    backgroundColor: '#f9efd5',
-  });
 });
 
 $$('.world').on('build', (i) => {
   switch (i) {
     case 1:
-      $('#background .container').animate({
+      $('#background .container').stop(false, true).animate({
         top: '-30%',
       }, 500, swifter);
-      $('#world-container').delay(200).fadeIn(500, swifter);
+      $('#world-container').delay(200).stop(false, true).fadeIn(500, swifter);
       break;
     case 2:
-      $('#world-container .wrap').animate({
+      $('#world-container .wrap').stop(false, true).animate({
         left: '-100%',
       });
+    case 3:
+      $('#background .container').stop(false, true).animate({
+        top: 0,
+      }, 500, swifter);
+      $('#world-container').stop(false, true).fadeOut(500, swifter)
+      $$('.editor').single().getComponent('PageScene').operate(1);
+      break;
   }
 });
 
@@ -55,5 +59,4 @@ $$('.world').on('hide', (i) => {
   $('#world-container').hide().removeAttr('style');
   $('#world-container .wrap').removeAttr('style');
   $('#background .container').removeAttr('style');
-  $('body').removeAttr('style');
 });

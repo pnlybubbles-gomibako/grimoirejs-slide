@@ -6,6 +6,11 @@ const Component = gr.Node.Component;
 const Tweenable = require('shifty');
 
 module.exports = class SlideRenderer extends Component {
+  constructor() {
+    super();
+    this.finished = true;
+  }
+
   $awake() {
     this.rendererComponent = this.node.getComponent(RendererComponent);
   }
@@ -57,7 +62,7 @@ module.exports = class SlideRenderer extends Component {
     // this.rendererComponent.setAttribute('camera', toCameraQuery);
     // const currentScene = this.node.getChildrenByClass('currentScene')[0].getComponent(RenderSceneComponent);
     // const previousScene = this.node.getChildrenByClass('previousScene')[0].getComponent(RenderSceneComponent);
-    if (this.transition) {
+    if (this.transition && !this.finished) {
       this.transition.stop();
       this.transition._finish();
     }
@@ -78,17 +83,22 @@ module.exports = class SlideRenderer extends Component {
         duration: tween.duration * 1000,
         easing: tween.easing,
         start: () => {
+          this.finished = false;
           this.updateCamera(currentCameraQuery, previousCameraQuery);
         },
         step: (state) => {
           this.slideRenderScene.setAttribute('progress', state.progress);
         },
-        finish: cb,
+        finish: () => {
+          if (cb) { cb(); }
+          this.finished = true;
+        },
       });
     } else {
       this.slideRenderScene.setAttribute('progress', 1);
       this.updateCamera(currentCameraQuery, previousCameraQuery);
       if (cb) { cb(); }
+      this.finished = true;
     }
   }
 

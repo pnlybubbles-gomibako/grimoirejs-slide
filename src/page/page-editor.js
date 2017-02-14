@@ -75,21 +75,21 @@ $$('.editor').on('build', (i) => {
       //     $$('.editor text').setAttribute('position', `${dp.X + s.x},${dp.Y + s.y},${dp.Z + s.z}`);
       //   },
       // });
-      $('#background .container').animate({
+      $('#background .container').stop(false, true).animate({
         top: '-30%',
       }, 500, swifter);
-      $('#editor-container').delay(200).fadeIn(500, swifter);
+      $('#editor-container').delay(200).stop(false, true).fadeIn(500, swifter);
       break;
     case 2:
-      $('#editor-container .wrap').animate({
+      $('#editor-container .wrap').stop(false, true).animate({
         left: '-100%',
       });
       break;
     case 3:
-      $('#background .container').animate({
+      $('#background .container').stop(false, true).animate({
         top: 0,
       }, 500, swifter);
-      $('#editor-container').fadeOut(500, swifter)
+      $('#editor-container').stop(false, true).fadeOut(500, swifter)
       $$('.editor').single().getComponent('PageScene').operate(1);
       break;
   }

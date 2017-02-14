@@ -9,7 +9,7 @@
     <mesh geometry="quad" material="new(topShader)" scale="7" position="0,2,0"></mesh>
     <mesh texture="src/page/logo.png" scale="3" position="0,0.5,-0.3" material="new(unlit)"></mesh>
     <mesh texture="src/page/self-intro.png" material="new(unlit)" rotation="y(180d)" position="0,0,0.5" scale="7,4,0"/>
-    <text text="Web開発のためのWebGLフレームワーク" textAlign="center" size="0.5" position="0.6,-2.5,0" color="#978b69" font="20pt Noto Sans CJK JP"></text>
+    <text text="Web開発のためのWebGLフレームワーク" textAlign="center" size="0.5" position="0.6,-2.5,0" color="#978b69" font="30pt Noto Sans CJK JP"></text>
   </page>
   <page color="#5C3DA8" class="webgl-start" transition="slide" duration="1" easing="swifter">
     <camera/>
