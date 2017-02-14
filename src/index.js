@@ -4,7 +4,7 @@ const Tweenable = require('shifty');
 Tweenable.setBezierFunction('swifter', 0.4, 0, 0, 1);
 
 gr(() => {
-  const $$ = gr('#canvas');
+  const $$ = gr('#slide');
   $$('page').on('show', (i, delta) => {
     console.log(`show ${i}: ${delta}`);
   });

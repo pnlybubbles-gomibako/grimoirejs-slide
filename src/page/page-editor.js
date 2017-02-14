@@ -3,7 +3,7 @@ const $ = require('jquery');
 const {swifter} = require('./easing');
 const Tweenable = require('shifty');
 
-const $$ = gr('#canvas');
+const $$ = gr('#slide');
 
 const editorConfig = [
   {
