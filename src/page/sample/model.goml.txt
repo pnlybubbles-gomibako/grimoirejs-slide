@@ -4,7 +4,8 @@
       <object.components>
         <Rotate/>
       </object.components>
-      <camera far="200" position="0,1,2" rotation="x(-20d)"/>
+      <camera far="200" position="0,1,2" rotation="x(-20d)">
+      </camera>
     </object>
     <model src="src/page/BrainStem.glb" scale="0.5"/>
     <mesh rotation="x(-90d)" texture="src/page/logo.png" scale="3" material="new(unlit)"/>

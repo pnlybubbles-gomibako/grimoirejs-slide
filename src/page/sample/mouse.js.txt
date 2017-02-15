@@ -1,9 +1,9 @@
-const mesh = gr('#canvas')('#cube').single();
+const mesh = gr("#canvas")("#cube").single();
 
-mesh.on('mouseenter', () => {
-  mesh.setAttribute('diffuse', 'red');
+mesh.on("mouseenter", () => {
+  mesh.setAttribute("diffuse", "red");
 });
 
-mesh.on('mouseleave', () => {
-  mesh.setAttribute('diffuse', 'blue');
+mesh.on("mouseleave", () => {
+  mesh.setAttribute("diffuse", "blue");
 });

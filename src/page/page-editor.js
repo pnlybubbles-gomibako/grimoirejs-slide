@@ -1,7 +1,7 @@
 const gr = require('grimoirejs').default;
 const $ = require('jquery');
 
-const $$ = gr('#slide');
+const $$ = gr('#canvas');
 
 const editorConfig = [
   {
@@ -26,15 +26,15 @@ $('#overlay').on('mousemove', $$('renderer').single().getComponent('Renderer')._
 $('#overlay').on('mouseleave', $$('renderer').single().getComponent('Renderer')._mouseLeaveHandler);
 $('#overlay').on('mouseenter', $$('renderer').single().getComponent('Renderer')._mouseEnterHandler);
 
-{
-  let phi = 0;
-  const rotate = () => {
-    $$('.editor mesh').setAttribute('rotation', `0,${phi},${phi}`);
-    phi += 1;
-    requestAnimationFrame(rotate);
-  }
-  rotate();
-}
+// {
+//   let phi = 0;
+//   const rotate = () => {
+//     $$('.editor mesh').setAttribute('rotation', `0,${phi},${phi}`);
+//     phi += 1;
+//     requestAnimationFrame(rotate);
+//   }
+//   rotate();
+// }
 
 $('#editor-container .left .run').on('click', (this_) => {
   const text = editors[0].getValue();

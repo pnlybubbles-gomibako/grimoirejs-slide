@@ -29,5 +29,6 @@ gr.register(async () => {
   gr.registerNode('page', ['PageScene'], {}, 'scene');
   gr.registerNode('slide-render-scene', ['MaterialContainer', 'SlideRenderScene'], {});
   gr.overrideDeclaration('mesh', [], { specularRatio: 0 });
-  require("./components/webcam");
+  require('./components/webcam');
+  gr.registerNode('kurukuru-mesh', ['Rotate'], {}, 'mesh');
 });

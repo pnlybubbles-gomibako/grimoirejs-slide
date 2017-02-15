@@ -5,7 +5,7 @@ require('./threejs-main')('#threejs-container .box', 512, 512);
 require('./jquery-main')('#jquery-container .box');
 require('./grimoire-main')('#compare-canvas', 'mesh');
 
-const $$ = gr('#slide');
+const $$ = gr('#canvas');
 
 const editorConfig = [
   {

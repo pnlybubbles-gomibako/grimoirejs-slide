@@ -1,9 +1,9 @@
 var mesh = gr("#canvas")("mesh");
 
 mesh.on("mouseenter", function() {
-    mesh.setAttribute("diffuse", "blue");
+  mesh.setAttribute("diffuse", "blue");
 });
 
 mesh.on("mouseleave", function() {
-    mesh.setAttribute("diffuse", "orange");
+  mesh.setAttribute("diffuse", "orange");
 });

@@ -1,5 +1,5 @@
 const Tweenable = require('shifty');
-const $$ = gr('#slide');
+const $$ = gr('#canvas');
 const transition = new Tweenable();
 const op = $$(".opening");
 
