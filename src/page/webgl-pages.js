@@ -10,7 +10,7 @@ $$('.webgl-start').on('show', () => {
 
 $$('.webgl-start').on('hide', (_, delta) => {
   if (delta <= 0) {
-    $('.webgl-caption-container').removeAttr('style');
+    $('.webgl-caption-container').stop(false, true).removeAttr('style');
   }
 });
 
@@ -32,6 +32,6 @@ $$('.webgl-end').on('show', (_, delta) => {
 
 $$('.webgl-end').on('hide', (_, delta) => {
   if (delta > 0) {
-    $('.webgl-caption-container').removeAttr('style');
+    $('.webgl-caption-container').stop(false, true).removeAttr('style');
   }
 });

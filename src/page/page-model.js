@@ -56,5 +56,5 @@ $$('.model').on('build', (i) => {
 });
 
 $$('.model').on('hide', (i) => {
-  $('#model-container').removeAttr('style');
+  $('#model-container').stop(false, true).removeAttr('style');
 });
