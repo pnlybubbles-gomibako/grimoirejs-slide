@@ -3,6 +3,7 @@
   <import-material typeName="spaceShader" src="./src/page/space.sort"></import-material>
   <import-material typeName="fusionShader" src="./src/page/fusion.sort"></import-material>
   <import-material typeName="webcamShader" src="./src/page/webcam.sort"></import-material>
+  <import-material typeName="futureShader" src="./src/page/future.sort"></import-material>
   <page color="#f9efd5" transition="noise" duration="1" class="opening" build="2">
     <object class="camera-origin">
       <camera/>
@@ -95,10 +96,17 @@
     <text text="コミュニティの方の作品" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0,3,0" color="#381794"></text>
     <mesh texture="./src/page/comunity.png" scale="4.5,3,1" position="0,-0.5,0" material="new(unlit)"></mesh>
   </page>
-  <page color="#f9efd5" class="slideshow" build="8" duration="4" easing="swifter" transition="black">
+  <page color="#f9efd5" class="slideshow" build="8" duration="2" easing="swifter" transition="black">
     <camera position="0,0,-12" fovy="140">
     </camera>
     <light></light>
+  </page>
+  <page color="black" duration="4" easing="swifter" transition="black">
+    <camera></camera>
+    <light></light>
+    <mesh texture="./src/page/pictures/future-01.png" position="2,0,3" scale="2" material="new(unlit)"></mesh>
+    <mesh texture="./src/page/pictures/future-02.png" position="-2,0,3" scale="2" material="new(unlit)"></mesh>
+    <mesh material="new(futureShader)" class="future-shader"/>
   </page>
   <page color="black">
     <camera></camera>
