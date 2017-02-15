@@ -91,8 +91,9 @@ $$('.compare').on('build', (i) => {
   }
 });
 $$('.compare').on('hide', (i) => {
-  // $('#background .container').removeAttr('style');
-  $('.compare-container').hide().removeAttr('style');
-  $('.compare-container .flex').removeAttr('style');
+  console.log('hide compare!!!');
+  // $('#background .container').stop(false, true).removeAttr('style');
+  $('.compare-container').stop(false, true).removeAttr('style');
+  $('.compare-container .flex').stop(false, true).removeAttr('style');
   // $$('goml').single().getComponent('CanvasInitializer')._onWindowResize();
 });
