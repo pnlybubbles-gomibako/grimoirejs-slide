@@ -18,7 +18,7 @@ module.exports = (editorConfig) => {
     editor.setValue(editorConfig[i].text);
     editor.clearSelection();
     editor.setOptions({
-      fontSize: '3vh',
+      fontSize: editorConfig[i].fontSize || '4vh',
     });
     editor.session.setOptions({
       tabSize: 2,

@@ -6,13 +6,13 @@ const $$ = gr('#slide');
 const editorConfig = [
   {
     id: 'xml-editor',
-    text: require('./sample/change-color.goml.txt'),
     mode: 'xml',
+    text: require('./sample/change-color.goml.txt'),
   },
   {
     id: 'html-editor',
-    text: require('./sample/change-color.html.txt'),
     mode: 'html',
+    text: require('./sample/change-color.html.txt'),
   },
   {
     id: 'js-editor',
@@ -42,7 +42,7 @@ $('#editor-container .left .run').on('click', (this_) => {
   const scene = parsed.querySelector('scene');
   console.log(scene);
   $$('.editor *').forEach((v) => {
-    if (v.name.name !== 'camera' && v.name.name !== 'light') {
+    if (v.name.name !== 'camera' && v.name.name !== 'light' && v.name.name !== 'text') {
       v.remove();
     }
   });
@@ -54,7 +54,7 @@ $('#editor-container .left .run').on('click', (this_) => {
 });
 
 $('#editor-container .right .run').on('click', (this_) => {
-  const text = editors[1].getValue();
+  const text = editors[2].getValue();
   eval(text);
 });
 

@@ -1,0 +1,1 @@
+gr.registerNode('rotate', ['Rotate'], {}, 'mesh');

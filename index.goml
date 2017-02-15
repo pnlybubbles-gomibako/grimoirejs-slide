@@ -18,7 +18,7 @@
   <page transition="slide" duration="1" easing="swifter">
     <object>
       <object.components>
-        <Rotate/>
+        <RotateVertical/>
       </object.components>
       <camera far="200" position="0,1,2" rotation="x(-20d)"/>
     </object>
@@ -39,7 +39,7 @@
     <camera></camera>
     <mesh geometry="sphere" texture="src/page/360.jpg" scale="10,10,-10" material="new(unlit)">
       <mesh.components>
-        <Rotate/>
+        <RotateVertical/>
       </mesh.components>
     </mesh>
   </page>
@@ -51,24 +51,24 @@
   <page color="#f9efd5" class="editor" build="5" transition="push" duration="1" easing="swifter">
     <camera></camera>
     <light></light>
-    <text text="WebGLのためのマークアップ" font="Bold 30pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,1.4,0" color="#381794"></text>
+    <text text="WebGLのためのマークアップ" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,1.4,0" color="#381794"></text>
     <mesh diffuse="orange" geometry="cube" scale="0.5" id="cube"></mesh>
   </page>
   <page color="#f9efd5" transition="push" duration="1" easing="swifter">
     <camera></camera>
     <light></light>
-    <text text="しかし用意されていない機能はどうするのか？" font="Bold 30pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,0,0" color="#381794"></text>
+    <text text="しかし用意されていない機能はどうするのか？" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,0,0" color="#381794"></text>
   </page>
-  <page color="#f9efd5" class="world" build="3" transition="push" duration="2" easing="swifter">
+  <page color="#f9efd5" class="world" build="7" transition="push" duration="1" easing="swifter">
     <camera></camera>
     <light></light>
-    <text text="Grimoire.jsのもう一つの機能、拡張性" font="Bold 30pt Noto Sans CJK JP" size="0.5" textAlign="center" position="1,1.4,0" color="#381794"></text>
-    <mesh diffuse="orange" geometry="cube" scale="0.5"></mesh>
+    <text text="Grimoire.jsの高い拡張性" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="1,1.4,0" color="#381794"></text>
+    <mesh diffuse="orange" geometry="cube" scale="0.5" rotation="10,30,0"></mesh>
   </page>
-  <page class="model" transition="noise" duration="1" easing="swifter" build="2">
+  <page class="model" transition="push" duration="2" easing="swifter" build="2">
     <object>
       <object.components>
-        <Rotate/>
+        <RotateVertical/>
       </object.components>
       <camera far="200" position="0,1,2" rotation="x(-20d)"/>
     </object>
@@ -77,23 +77,38 @@
     <mesh geometry="sphere" texture="src/page/3602.jpg" scale="10,10,-10" position="0,5,0" material="new(unlit)">
     </mesh>
   </page>
-  <page color="black" build="1" class="fusion-page">
+  <page color="#f9efd5" transition="push" duration="1" easing="swifter">
+    <camera></camera>
+    <light></light>
+    <text text="PBR" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,0,0" color="#381794"></text>
+  </page>
+  <page color="#f9efd5" transition="push" duration="1" easing="swifter">
+    <camera></camera>
+    <light></light>
+    <text text="ハンズオン" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,0,0" color="#381794"></text>
+  </page>
+  <page color="#f9efd5" transition="push" duration="1" easing="swifter">
+    <camera></camera>
+    <light></light>
+    <text text="コミュニティの方の作品" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,0,0" color="#381794"></text>
+  </page>
+  <page color="#f9efd5" transition="noise" duration="1" easing="swifter">
+    <camera></camera>
+    <light></light>
+    <text text="このワークフローが分業可能になる" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,0.5,0" color="#381794"></text>
+    <text text="調整やデザインと高度なロジックの分離、再利用容易性" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,-0.5,0" color="#381794"></text>
+  </page>
+  <page color="black" build="1" class="fusion-page" transition="push" duration="1" easing="swifter">
     <camera aspect="1.6" orthogonal="true" orthoSize="5"/>
     <mesh texture="src/page/web.png" position="4,1,3" scale="1.6,1,1" material="new(unlit)"/>
     <mesh texture="src/page/unity.png" position="-4,1,3" scale="1.5" material="new(unlit)"/>
     <mesh texture="src/page/logo.png" position="0,0,3" scale="1.5" material="new(unlit)" class="gr-logo" color="rgba(255,255,255,0)"/>
     <mesh material="new(fusionShader)" class="fusion-shader" progress="0"/>
   </page>
-  <page color="#f9efd5" transition="push" duration="1" easing="swifter">
+  <page color="black" transition="push" duration="1" easing="swifter">
     <camera></camera>
     <light></light>
-    <text text="このワークフローが分業可能になる" font="Bold 30pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,1,0" color="#381794"></text>
-    <text text="調整やデザインと高度なロジックの分離、再利用容易性" font="Bold 30pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,-1,0" color="#381794"></text>
-  </page>
-  <page color="#f9efd5" transition="push" duration="1" easing="swifter">
-    <camera></camera>
-    <light></light>
-    <text text="ハンズオン" font="Bold 30pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,0,0" color="#381794"></text>
+    <text text="END" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,0,0" color="#f9efd5"></text>
   </page>
   <!-- <renderer>
     <texture-buffer name="current-buffer"></texture-buffer>
