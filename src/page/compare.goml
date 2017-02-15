@@ -1,7 +1,7 @@
 <goml width="512" height="512">
-    <scene>
-        <camera/>
-        <light position="10" rotation="0,45,45"></light>
-        <mesh diffuse="orange" geometry="cube" specularRatio="0"></mesh>
-    </scene>
+  <scene>
+    <camera/>
+    <light rotation="0,45,45" intensity="3"></light>
+    <mesh diffuse="#FF6100" geometry="cube" specularRatio="0"></mesh>
+  </scene>
 </goml>

@@ -1700,9 +1700,9 @@ grimoirejs-math@latest:
   dependencies:
     gl-matrix "^2.3.2"
 
-grimoirejs-text@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/grimoirejs-text/-/grimoirejs-text-1.0.5.tgz#631e595ef9e804268e461c6f467ccd6fa37b4147"
+grimoirejs-text@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/grimoirejs-text/-/grimoirejs-text-1.0.6.tgz#a6c4d4ca2d60a7f27b95172219c3385687470aa1"
   dependencies:
     grimoirejs "^0.14.7"
     grimoirejs-fundamental "^0.12.8"

@@ -46,28 +46,28 @@
   <page color="#f9efd5" class="compare" build="4" transition="push" duration="1" easing="swifter">
     <camera></camera>
     <mesh geometry="cube" scale="0"></mesh>
-    <light type="directional"/>
+    <light rotation="0,45,45" intensity="3"></light>
   </page>
   <page color="#f9efd5" class="editor" build="5" transition="push" duration="1" easing="swifter">
     <camera></camera>
-    <light></light>
+    <light rotation="0,45,45" intensity="3"></light>
     <text text="WebGLのためのマークアップ" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,1.4,0" color="#381794"></text>
-    <mesh diffuse="orange" geometry="cube" scale="0.5" id="cube"></mesh>
+    <mesh id="cube" diffuse="#FF6100" geometry="cube" scale="0.5" rotation="10,30,0"></mesh>
   </page>
 <!--   <page color="#f9efd5" transition="push" duration="1" easing="swifter">
     <camera></camera>
-    <light></light>
+    <light rotation="0,45,45" intensity="3"></light>
     <text text="拡張性" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,0,0" color="#381794"></text>
   </page>
  -->  <page color="#f9efd5" class="world" build="7" transition="push" duration="1" easing="swifter">
     <camera></camera>
-    <light></light>
+    <light rotation="0,45,45" intensity="3"></light>
     <text text="Grimoire.jsの高い拡張性" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="1,1.4,0" color="#381794"></text>
-    <mesh diffuse="orange" geometry="cube" scale="0.5" rotation="10,30,0"></mesh>
+    <mesh diffuse="#FF6100" geometry="cube" scale="0.5" rotation="10,30,0"></mesh>
   </page>
   <page color="#f9efd5" transition="reveal" duration="1" easing="swifter">
     <camera></camera>
-    <light></light>
+    <light rotation="0,45,45" intensity="3"></light>
     <text text="WebとCGを橋渡しになる" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,0.5,0" color="#381794"></text>
     <text text="理想的な役割分担の実現" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,-0.5,0" color="#381794"></text>
   </page>
@@ -80,8 +80,7 @@
     </object>
     <model src="src/page/BrainStem.glb" scale="0.5"/>
     <mesh rotation="x(-90d)" texture="src/page/logo.png" scale="3" material="new(unlit)"/>
-    <mesh geometry="sphere" texture="src/page/3602.jpg" scale="10,10,-10" position="0,5,0" material="new(unlit)">
-    </mesh>
+    <mesh geometry="sphere" texture="src/page/3602.jpg" scale="10,10,-10" position="0,5,0" material="new(unlit)"></mesh>
   </page>
   <page color="black" build="1" class="fusion-page" transition="push" duration="1" easing="swifter">
     <camera aspect="1.6" orthogonal="true" orthoSize="5"/>
@@ -89,6 +88,23 @@
     <mesh texture="src/page/unity.png" position="-4,1,3" scale="2" material="new(unlit)"/>
     <mesh texture="src/page/logo.png" position="0,0,3" scale="2" material="new(unlit)" class="gr-logo" color="rgba(255,255,255,0)"/>
     <mesh material="new(fusionShader)" class="fusion-shader" progress="0"/>
+  </page>
+  <page color="#f9efd5" transition="push" duration="1" easing="swifter">
+    <camera></camera>
+    <light></light>
+    <text text="コミュニティの方の作品" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,3,0" color="#381794"></text>
+  </page>
+  <page color="#f9efd5" transition="reveal" duration="2" easing="swifter">
+    <camera></camera>
+    <light></light>
+    <text text="ハッカソン" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,3,0" color="#381794"></text>
+    <mesh texture="./src/page/pictures/img6.png" scale="6"></mesh>
+  </page>
+  <page color="#f9efd5" transition="reveal" duration="2" easing="swifter">
+    <camera></camera>
+    <light></light>
+    <text text="ハッカソン" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,3,0" color="#381794"></text>
+    <mesh texture="./src/page/pictures/img7.png" scale="6"></mesh>
   </page>
   <page color="#f9efd5" transition="reveal" duration="2" easing="swifter">
     <camera></camera>
@@ -123,18 +139,6 @@
   <page color="#f9efd5" transition="reveal" duration="2" easing="swifter">
     <camera></camera>
     <light></light>
-    <text text="ハッカソン" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,3,0" color="#381794"></text>
-    <mesh texture="./src/page/pictures/img6.png" scale="6"></mesh>
-  </page>
-  <page color="#f9efd5" transition="reveal" duration="2" easing="swifter">
-    <camera></camera>
-    <light></light>
-    <text text="ハッカソン" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,3,0" color="#381794"></text>
-    <mesh texture="./src/page/pictures/img7.png" scale="6"></mesh>
-  </page>
-  <page color="#f9efd5" transition="reveal" duration="2" easing="swifter">
-    <camera></camera>
-    <light></light>
     <text text="Global Game Jam" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,3,0" color="#381794"></text>
     <mesh texture="./src/page/pictures/img8.png" scale="6"></mesh>
   </page>
@@ -143,11 +147,6 @@
     <light></light>
     <text text="Global Game Jam" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,3,0" color="#381794"></text>
     <mesh texture="./src/page/pictures/img9.jpg" scale="6"></mesh>
-  </page>
-  <page color="#f9efd5" transition="push" duration="1" easing="swifter">
-    <camera></camera>
-    <light></light>
-    <text text="コミュニティの方の作品" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,3,0" color="#381794"></text>
   </page>
   <page color="black" transition="push" duration="1" easing="swifter">
     <camera></camera>

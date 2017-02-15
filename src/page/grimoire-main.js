@@ -12,7 +12,7 @@ module.exports = (canvas, selector) => {
     rotate();
 
     function rotate() {
-        mesh.setAttribute("rotation", "0," + rot + "," + rot);
+        mesh.setAttribute("rotation", rot + "," + rot + "," + rot);
         rot += 1;
         requestAnimationFrame(rotate);
     }

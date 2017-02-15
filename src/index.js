@@ -1,9 +1,10 @@
 const gr = require('grimoirejs').default;
 
 require('./page/shifty-easing');
+require('./page/overlay-toggle-button');
 
 gr(() => {
-  const $$ = gr('#slide');
+  const $$ = gr('#canvas');
   $$('page').on('show', (i, delta) => {
     console.log(`show ${i}: ${delta}`);
   });

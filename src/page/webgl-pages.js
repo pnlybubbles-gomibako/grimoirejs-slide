@@ -1,4 +1,4 @@
-const $$ = gr('#slide');
+const $$ = gr('#canvas');
 const { swifter } = require('./easing');
 
 const $ = require('jquery');

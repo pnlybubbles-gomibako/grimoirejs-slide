@@ -1,1 +1,1 @@
-gr.registerNode('rotate', ['Rotate'], {}, 'mesh');
+gr.registerNode("kurukuru-mesh", ["Rotate"], {}, "mesh");

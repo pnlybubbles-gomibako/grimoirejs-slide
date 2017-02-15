@@ -1,5 +1,8 @@
 <html>
+<head>
+  <script type="text/javascript" script="griomire.js"></script>
+</head>
 <body>
-  <script type="text/goml" src="index.goml" id="slide"></script>
+  <script type="text/goml" src="index.goml" id="canvas"></script>
 </body>
 </html>

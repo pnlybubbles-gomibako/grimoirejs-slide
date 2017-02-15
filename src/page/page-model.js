@@ -2,7 +2,7 @@ const gr = require('grimoirejs').default;
 const $ = require('jquery');
 const { swifter } = require('./easing');
 
-const $$ = gr('#slide');
+const $$ = gr('#canvas');
 
 const editorConfig = [
   {
@@ -27,7 +27,7 @@ $('#model-container .left .run').on('click', (this_) => {
   Array.from(scene.childNodes).forEach((node) => {
     if (node.nodeType !== 1) { return; }
     if (node.nodeName === 'light') { return; }
-    const camera = node.querySelector('camera');
+    const camera = node.nodeName === 'camera' ? node : node.querySelector('camera');
     if (camera) {
       camera.setAttribute('id', cameraId);
     }

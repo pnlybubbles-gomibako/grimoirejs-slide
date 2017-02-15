@@ -1,7 +1,7 @@
 const gr = require('grimoirejs').default;
 const $ = require('jquery');
 
-const $$ = gr('#slide');
+const $$ = gr('#canvas');
 
 const editorConfig = [
   {
