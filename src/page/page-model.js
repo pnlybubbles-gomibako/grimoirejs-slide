@@ -36,8 +36,7 @@ $('#model-container .left .run').on('click', (this_) => {
     $$('.model').append(node.outerHTML);
   });
   $$('#current-render-scene').setAttribute('camera', null);
-  $$('#current-render-scene').setAttribute('camera', cameraId);
-  console.log('changed');
+  $$('#current-render-scene').setAttribute('camera', `#${cameraId}`);
 });
 
 $$('.model').on('show', () => {

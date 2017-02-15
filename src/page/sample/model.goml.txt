@@ -2,7 +2,7 @@
   <scene>
     <object>
       <object.components>
-        <Rotate/>
+        <RotateVertical/>
       </object.components>
       <camera far="200" position="0,1,2" rotation="x(-20d)"/>
     </object>
