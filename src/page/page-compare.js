@@ -11,16 +11,19 @@ const editorConfig = [
   {
     id: 'jquery-editor',
     mode: 'javascript',
+    fontSize: '3vh',
     text: require('./sample/jquery-div-color.txt'),
   },
   {
     id: 'threejs-editor',
     mode: 'javascript',
+    fontSize: '3vh',
     text: require('./sample/three-color.txt'),
   },
   {
     id: 'grimoire-editor',
     mode: 'javascript',
+    fontSize: '3vh',
     text: require('./sample/grimoire-color.txt'),
   },
 ];

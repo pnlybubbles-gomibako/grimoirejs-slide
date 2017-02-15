@@ -1,4 +1,4 @@
-gr.registerComponent("Rotate",{
+gr.registerComponent("RotateVertical",{
   attributes:{
     speed:{
       default:0.2,
