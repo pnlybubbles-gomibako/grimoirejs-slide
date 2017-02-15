@@ -94,59 +94,10 @@
     <light></light>
     <text text="コミュニティの方の作品" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,3,0" color="#381794"></text>
   </page>
-  <page color="#f9efd5" transition="reveal" duration="2" easing="swifter">
-    <camera></camera>
+  <page class="slideshow" build="8">
+    <camera position="0,0,-12" fovy="140">
+    </camera>
     <light></light>
-    <text text="ハッカソン" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,3,0" color="#381794"></text>
-    <mesh texture="./src/page/pictures/img6.png" scale="6"></mesh>
-  </page>
-  <page color="#f9efd5" transition="reveal" duration="2" easing="swifter">
-    <camera></camera>
-    <light></light>
-    <text text="ハッカソン" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,3,0" color="#381794"></text>
-    <mesh texture="./src/page/pictures/img7.png" scale="6"></mesh>
-  </page>
-  <page color="#f9efd5" transition="reveal" duration="2" easing="swifter">
-    <camera></camera>
-    <light></light>
-    <text text="ハンズオン" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,3,0" color="#381794"></text>
-    <mesh texture="./src/page/pictures/img1.jpg" scale="6"></mesh>
-  </page>
-  <page color="#f9efd5" transition="reveal" duration="2" easing="swifter">
-    <camera></camera>
-    <light></light>
-    <text text="ハンズオン" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,3,0" color="#381794"></text>
-    <mesh texture="./src/page/pictures/img2.jpg" scale="6"></mesh>
-  </page>
-  <page color="#f9efd5" transition="reveal" duration="2" easing="swifter">
-    <camera></camera>
-    <light></light>
-    <text text="ハンズオン" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,3,0" color="#381794"></text>
-    <mesh texture="./src/page/pictures/img3.jpg" scale="6"></mesh>
-  </page>
-  <page color="#f9efd5" transition="reveal" duration="2" easing="swifter">
-    <camera></camera>
-    <light></light>
-    <text text="ハンズオン" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,3,0" color="#381794"></text>
-    <mesh texture="./src/page/pictures/img4.jpg" scale="6"></mesh>
-  </page>
-  <page color="#f9efd5" transition="reveal" duration="2" easing="swifter">
-    <camera></camera>
-    <light></light>
-    <text text="ハンズオン" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,3,0" color="#381794"></text>
-    <mesh texture="./src/page/pictures/img5.jpg" scale="6"></mesh>
-  </page>
-  <page color="#f9efd5" transition="reveal" duration="2" easing="swifter">
-    <camera></camera>
-    <light></light>
-    <text text="Global Game Jam" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,3,0" color="#381794"></text>
-    <mesh texture="./src/page/pictures/img8.png" scale="6"></mesh>
-  </page>
-  <page color="#f9efd5" transition="reveal" duration="2" easing="swifter">
-    <camera></camera>
-    <light></light>
-    <text text="Global Game Jam" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,3,0" color="#381794"></text>
-    <mesh texture="./src/page/pictures/img9.jpg" scale="6"></mesh>
   </page>
   <page color="black" transition="push" duration="1" easing="swifter">
     <camera></camera>
