@@ -12,6 +12,7 @@ const pushShader = require('./transition/push.sort');
 const glitchShader = require('./transition/glitch.sort');
 const noiseShader = require('./transition/noise.sort');
 const revealShader = require('./transition/reveal.sort');
+const blackShader = require('./transition/black.sort');
 
 gr.register(async () => {
   MaterialFactory.addSORTMaterial('fxaa', fxaaShader);
@@ -20,6 +21,7 @@ gr.register(async () => {
   MaterialFactory.addSORTMaterial('transition-glitch', glitchShader);
   MaterialFactory.addSORTMaterial('transition-noise', noiseShader);
   MaterialFactory.addSORTMaterial('transition-reveal', revealShader);
+  MaterialFactory.addSORTMaterial('transition-black', blackShader);
   gr.registerComponent('SlideManager', SlideManager);
   gr.registerComponent('SlideRenderScene', SlideRenderScene);
   gr.registerComponent('SlideRenderer', SlideRenderer);

@@ -1,6 +1,7 @@
 const gr = require('grimoirejs').default;
 const $ = require('jquery');
 const { swifter } = require('./easing');
+const editorRunable = require('./editor-runable');
 
 const $$ = gr('#canvas');
 
@@ -13,34 +14,7 @@ const editorConfig = [
 ];
 const editors = require('./editor-settings')(editorConfig);
 
-$('#model-container .left .run').on('click', (this_) => {
-  const text = editors[0].getValue();
-  const parsed = (new DOMParser).parseFromString(text, 'application/xml').documentElement;
-  const scene = parsed.querySelector('scene');
-  console.log(scene);
-  const cameraId = $$('.model camera').getAttribute('id');
-  $$('.model *').forEach((v) => {
-    if (v.name.name !== 'light') {
-      v.remove();
-    }
-  });
-  Array.from(scene.childNodes).forEach((node) => {
-    if (node.nodeType !== 1) { return; }
-    if (node.nodeName === 'light') { return; }
-    const camera = node.nodeName === 'camera' ? node : node.querySelector('camera');
-    if (camera) {
-      camera.setAttribute('id', cameraId);
-    }
-    console.log($$('.model'));
-    console.log(node.outerHTML);
-    $$('.model').append(node.outerHTML);
-  });
-  $$('#current-render-scene').setAttribute('camera', null);
-  $$('#current-render-scene').setAttribute('camera', `#${cameraId}`);
-});
-
-$$('.model').on('show', () => {
-});
+editorRunable.goml('#model-container .left .run', '.model', editors[0]);
 
 $$('.model').on('build', (i) => {
   console.log('model', i);

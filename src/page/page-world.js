@@ -1,7 +1,7 @@
 const gr = require('grimoirejs').default;
 const $ = require('jquery');
-
 const $$ = gr('#canvas');
+const editorRunable = require('./editor-runable');
 
 const editorConfig = [
   {
@@ -32,42 +32,8 @@ const editorConfig = [
 ];
 const editors = require('./editor-settings')(editorConfig);
 
-$('#world-container .right .run').on('click', (this_) => {
-  const text = editors[2].getValue();
-  const parsed = (new DOMParser).parseFromString(text, 'application/xml').documentElement;
-  const scene = parsed.querySelector('scene');
-  console.log(scene);
-  $$('.world *').forEach((v) => {
-    if (v.name.name !== 'camera' && v.name.name !== 'light' && v.name.name !== 'text') {
-      v.remove();
-    }
-  });
-  Array.from(scene.childNodes).forEach((node) => {
-    if (node.nodeType !== 1) { return; }
-    if (node.nodeName === 'camera' || node.nodeName === 'light') { return; }
-    $$('.world').append(node.outerHTML);
-  });
-});
-
-$('#world-container .rrright .run').on('click', (this_) => {
-  const text = editors[4].getValue();
-  const parsed = (new DOMParser).parseFromString(text, 'application/xml').documentElement;
-  const scene = parsed.querySelector('scene');
-  console.log(scene);
-  $$('.world *').forEach((v) => {
-    if (v.name.name !== 'camera' && v.name.name !== 'light' && v.name.name !== 'text') {
-      v.remove();
-    }
-  });
-  Array.from(scene.childNodes).forEach((node) => {
-    if (node.nodeType !== 1) { return; }
-    if (node.nodeName === 'camera' || node.nodeName === 'light') { return; }
-    $$('.world').append(node.outerHTML);
-  });
-});
-
-$$('.world').on('show', () => {
-});
+editorRunable.goml('#world-container .right .run', '.world', editors[2]);
+editorRunable.goml('#world-container .rrright .run', '.world', editors[4]);
 
 const editorBuild = require('./editor-build')('#world-container', '.world', 4);
 $$('.world').on('build', (i) => {

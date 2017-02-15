@@ -30,10 +30,10 @@ const editorConfig = [
 const editors = require('./editor-settings')(editorConfig);
 
 $$('.compare').on('show', () => {
-  $('#jquery-container').stop(false, true).delay(700).fadeIn(500, swifter);
+  $('#jquery-container').stop(false, true).delay(500).fadeIn(500, swifter);
   $('#threejs-container').css({
     left: '50%',
-  }).stop(false, true).delay(700).fadeIn(500, swifter);
+  }).stop(false, true).delay(500).fadeIn(500, swifter);
 });
 $$('.compare').on('build', (i) => {
   switch (i) {
@@ -91,9 +91,6 @@ $$('.compare').on('build', (i) => {
   }
 });
 $$('.compare').on('hide', (i) => {
-  console.log('hide compare!!!');
-  // $('#background .container').stop(false, true).removeAttr('style');
   $('.compare-container').stop(false, true).removeAttr('style');
   $('.compare-container .flex').stop(false, true).removeAttr('style');
-  // $$('goml').single().getComponent('CanvasInitializer')._onWindowResize();
 });

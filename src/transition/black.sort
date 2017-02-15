@@ -1,0 +1,31 @@
+@Pass {
+  @Disable(BLEND)
+  @Disable(DEPTH_TEST)
+  FS_PREC(mediump,float)
+
+  varying vec2 vTexCoord;
+
+  #ifdef VS
+    attribute vec3 position;
+    attribute vec2 texCoord;
+    void main(){
+      gl_Position = vec4(position, 1.);
+      vTexCoord = texCoord;
+    }
+  #endif
+
+  #ifdef FS
+    uniform sampler2D current;
+    uniform sampler2D previous;
+    uniform float progress;
+
+    void main() {
+      vec2 iTexCoord = vec2(1., -1.) * vTexCoord;
+      if (progress < 0.5) {
+        gl_FragColor = vec4(texture2D(previous, iTexCoord).rgb * (1. - progress * 2.), 1.);
+      } else {
+        gl_FragColor = vec4(texture2D(current, iTexCoord).rgb * (progress * 2. - 1.), 1.);
+      }
+    }
+  #endif
+}

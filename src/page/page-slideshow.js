@@ -6,9 +6,6 @@ const $$ = gr('#canvas');
 const scene = $$('.slideshow').single();
 const object = scene.addChildByName('object');
 object.setAttribute('rotation', 'y(90)');
-// object.addComponent('Rotate', {
-//     speed: 0.05
-// });
 const dataNum = 9;
 const cellNum = 10;
 const radius = 12.8;
@@ -56,7 +53,7 @@ for (let i = 0; i < dataNum; i++) {
   });
   $$(`.slideshow .img${i + 1}`).addChildByName('text', {
     text: label[i],
-    font: '30pt Noto Sans CJK JP',
+    font: 'Bold 30pt Noto Sans CJK JP',
     color: '#381794',
     size: 0.15,
     position: [labelOffset[i], 1.2 * ((-1) ** i % group), 0],
@@ -69,7 +66,6 @@ let rotateTweenable = null;
 
 $$('.slideshow').on('build', (i) => {
   if (rotateTweenable) {
-    console.log('stop', Quaternion.angleAxis(18 * (i - 1) * Math.PI / 180, new Vector3(0, 1, 0)).toString());
     rotateTweenable.stop();
     object.setAttribute('rotation', Quaternion.multiply(initialRotation, (Quaternion.angleAxis(18 * (i - 1) * Math.PI / 180, new Vector3(0, 1, 0)))));
   }

@@ -12,7 +12,6 @@ module.exports = (editorConfig) => {
   });
   const editors = editorConfig.map((v) => ace.edit(v.id));
   editors.forEach((editor, i) => {
-    // require(`brace/mode/${editorConfig[i].mode}`);
     editor.getSession().setMode(`ace/mode/${editorConfig[i].mode}`);
     // editor.renderer.setShowGutter(false);
     editor.setValue(editorConfig[i].text);

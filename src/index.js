@@ -14,16 +14,16 @@ gr(() => {
   $$('page').on('build', (i) => {
     console.log(`build ${i}`);
   });
-  $$("goml").addComponent("WebAudioShaderResource");
-  $$("goml").addComponent("WebcamShaderResource");
+  $$('goml').addComponent('WebAudioShaderResource');
+  $$('goml').addComponent('WebcamShaderResource');
 
   // pages
-  require('./page/opening-page');
+  require('./page/page-opening');
   require('./page/page-compare');
   require('./page/page-editor');
   require('./page/page-world');
-  require('./page/fusion-page');
-  require('./page/webgl-pages');
+  require('./page/page-fusion');
+  require('./page/page-webgl');
   require('./page/page-model');
-  require('./page/slideshow');
+  require('./page/page-slideshow');
 });
