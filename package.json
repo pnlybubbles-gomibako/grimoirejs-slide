@@ -10,7 +10,7 @@
     "grimoirejs": "^0.14.7",
     "grimoirejs-forward-shading": "^1.4.2",
     "grimoirejs-fundamental": "^0.12.10",
-    "grimoirejs-gltf": "^1.8.4",
+    "grimoirejs-gltf": "^1.8.5",
     "grimoirejs-math": "^1.12.1",
     "grimoirejs-text": "^1.0.6",
     "jquery": "^3.1.1",
@@ -33,7 +33,7 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^6.7.2",
+    "autoprefixer": "^6.7.3",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-es2016": "^6.22.0",
     "babel-preset-es2017": "^6.22.0",
