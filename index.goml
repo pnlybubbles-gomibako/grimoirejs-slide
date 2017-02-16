@@ -90,22 +90,22 @@
     <mesh texture="src/page/logo.png" position="0,0,3" scale="2" material="new(unlit)" class="gr-logo" color="rgba(255,255,255,0)"/>
     <mesh material="new(fusionShader)" class="fusion-shader" progress="0"/>
   </page>
-  <page color="#f9efd5" transition="push" duration="1" easing="swifter" class="comunity">
+  <page color="#f9efd5" class="slideshow" build="8" duration="1" easing="swifter" transition="push">
+    <camera position="0,0,-12" fovy="140">
+    </camera>
+    <light></light>
+  </page>
+  <page color="#f9efd5" transition="black" duration="2" easing="swifter" class="comunity">
     <camera></camera>
     <light></light>
     <text text="コミュニティの方の作品" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0,3,0" color="#381794"></text>
     <mesh texture="./src/page/comunity.png" scale="4.5,3,1" position="0,-0.5,0" material="new(unlit)"></mesh>
   </page>
-  <page color="#f9efd5" class="slideshow" build="8" duration="2" easing="swifter" transition="black">
-    <camera position="0,0,-12" fovy="140">
-    </camera>
-    <light></light>
-  </page>
-  <page color="black" duration="4" easing="swifter" transition="black">
+  <page color="black" duration="4" easing="swifter" transition="black" build="2" class="future">
     <camera></camera>
     <light></light>
-    <mesh texture="./src/page/pictures/future-01.png" position="2,0,3" scale="2" material="new(unlit)"></mesh>
-    <mesh texture="./src/page/pictures/future-02.png" position="-2,0,3" scale="2" material="new(unlit)"></mesh>
+    <mesh class="future-image0" texture="./src/page/pictures/future-01.png" position="2,0,3" scale="2" material="new(unlit)" color="rgba(255,255,255,0)"></mesh>
+    <mesh class="future-image1" texture="./src/page/pictures/future-02.png" position="-2,0,3" scale="2" material="new(unlit)" color="rgba(255,255,255,0)"></mesh>
     <mesh material="new(futureShader)" class="future-shader"/>
   </page>
   <page color="black">
