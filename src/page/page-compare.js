@@ -62,12 +62,12 @@ $$('.compare').on('build', (i) => {
       }, 500, swifter);
       break;
     case 3:
-      $('#threejs-container').css({
+      $('#threejs-container').stop(false, true).css({
         transform: 'scale(1)',
       })
       $({
         scale: 1,
-      }).stop(false, true).animate({
+      }).animate({
         scale: 0.3,
       }, {
         duration: 500,
@@ -79,15 +79,36 @@ $$('.compare').on('build', (i) => {
         },
         queue: false,
       })
-      $('#threejs-container').stop(false, true).fadeOut(500, swifter);
+      $('#threejs-container').fadeOut(500, swifter);
       $('#jquery-container').delay(200).stop(false, true).animate({
         left: '0%',
       });
       break;
     case 4:
+      $('#sugoku-tukaiyasui-container').stop(false, true).css({
+        transform: 'scale(2)',
+      })
+      $({
+        scale: 2,
+      }).animate({
+        scale: 1,
+      }, {
+        duration: 500,
+        easing: swifter,
+        step(now) {
+          $('#sugoku-tukaiyasui-container').css({
+            transform: `scale(${now})`,
+          });
+        },
+        queue: false,
+      });
+      $('#sugoku-tukaiyasui-container').fadeIn(500, swifter);
+      break;
+    case 5:
       $('.compare-container').stop(false, true).fadeOut(500, swifter).promise().then(() => {
         $$('.compare').single().getComponent('PageScene').operate(1);
       });
+      break;
   }
 });
 $$('.compare').on('hide', (i) => {
