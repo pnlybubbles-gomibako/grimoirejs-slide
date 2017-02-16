@@ -6,12 +6,12 @@ gr.registerComponent("Rotate",{
     }
   },
   $mount(){
-    this.getAttributeRaw("speed").boundTo("speed");
+    this.__bindAttributes();
     this.transform = this.node.getComponent("Transform");
     this.current = 0;
   },
   $update(){
     this.current += this.speed;
-    this.transform.setAttribute("rotation",`y(${this.current})`);
+    this.transform.rotation = `y(${this.current})`;
   }
 });
