@@ -6,7 +6,7 @@ module.exports = function(selector, width, height) {
   camera.position.set(0, 0, 50);
   const renderer = new THREE.WebGLRenderer({
     alpha: true,
-    antialias: true
+    antialias: true,
   });
   renderer.setSize(width, height);
   const light = new THREE.DirectionalLight(0xffffff);
@@ -22,8 +22,8 @@ module.exports = function(selector, width, height) {
   scene.add(mesh);
   obj.addEventListener('mousemove', onMouseMove);
   const mouse = {
-    x: 0,
-    y: 0
+    x: Number.MAX_VALUE,
+    y: Number.MAX_VALUE,
   };
 
   function onMouseMove(e) {
@@ -32,6 +32,9 @@ module.exports = function(selector, width, height) {
     mouse.y = e.clientY - rect.top;
     mouse.x = (mouse.x / width) * 2 - 1;
     mouse.y = -(mouse.y / height) * 2 + 1;
+  }
+  (function update() {
+    requestAnimationFrame(update);
     const vector = new THREE.Vector3(mouse.x, mouse.y, 1);
     vector.unproject(camera);
     const ray = new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
@@ -41,13 +44,10 @@ module.exports = function(selector, width, height) {
     } else {
       material.color.set('orange');
     }
-  }
-  (function update() {
-    requestAnimationFrame(update);
     mesh.rotation.set(
       0,
       mesh.rotation.y + .02,
-      mesh.rotation.z + .02
+      mesh.rotation.z + .02,
     );
     renderer.render(scene, camera);
   })();

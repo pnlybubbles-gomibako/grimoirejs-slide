@@ -26,7 +26,7 @@ $$('.future').on('build', (i) => {
       break;
     case 2:
       if (tweenable) {
-        tweenable.step();
+        tweenable.stop();
         tweenable = null;
       }
       tweenable = fadeIn('.future .future-image1');
