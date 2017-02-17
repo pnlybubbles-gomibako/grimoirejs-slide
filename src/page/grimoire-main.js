@@ -6,7 +6,7 @@ module.exports = (canvas, selector) => {
     mesh.setAttribute('diffuse', 'blue');
   });
   mesh.on('mouseleave', function() {
-    mesh.setAttribute('diffuse', 'orange');
+    mesh.setAttribute('diffuse', '#FF6100');
   });
   var rot = 0;
   rotate();
