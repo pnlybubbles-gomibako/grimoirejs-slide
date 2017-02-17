@@ -33,12 +33,12 @@ const editorBuild = require('./editor-build')('#editor-container', '.editor', 3)
 $$('.editor').on('build', (i) => {
   switch (i) {
     case 3:
-      $(`#editor-container .wrap`).stop(false, true).animate({
+      $(`#editor-container .wrap`).stop(true, true).animate({
         left: '0%',
       });
       break;
     case 4:
-      $(`#editor-container .wrap`).stop(false, true).animate({
+      $(`#editor-container .wrap`).stop(true, true).animate({
         left: '-200%',
       });
       break;
