@@ -4,10 +4,14 @@ require('brace/mode/javascript');
 require('brace/mode/xml');
 require('brace/mode/html');
 
+const stopPropagationKey = ['ArrowRight', 'ArrowLeft'];
+
 module.exports = (editorConfig) => {
   editorConfig.forEach((v) => {
     $(`#${v.id}`).on('keyup', (e) => {
-      e.stopPropagation();
+      if (stopPropagationKey.includes(e.key)) {
+        e.stopPropagation();
+      }
     });
   });
   const editors = editorConfig.map((v) => ace.edit(v.id));
