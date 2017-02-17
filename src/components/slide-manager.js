@@ -11,6 +11,7 @@ module.exports = class SlideManager extends Component {
       e.preventDefault();
       if (this.pages.length === 0) { return; }
       switch (e.key) {
+        case 'PageDown':
         case 'ArrowRight':
           if (this.pages[this.number].getAttribute('build') > this.build) {
             this.build += 1;
@@ -22,6 +23,7 @@ module.exports = class SlideManager extends Component {
           }
           this.operate(1);
           break;
+        case 'PageUp':
         case 'ArrowLeft':
           if (this.build > 0) {
             this.operate(0);

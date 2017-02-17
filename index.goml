@@ -16,7 +16,7 @@
   <page color="#5C3DA8" class="webgl-start" transition="slide" duration="1" easing="swifter">
     <camera/>
   </page>
-  <page transition="slide" duration="1" easing="swifter">
+  <page class="webgl-shader" transition="slide" duration="1" easing="swifter">
     <object>
       <object.components>
         <Rotate/>
@@ -66,7 +66,7 @@
     <text text="Grimoire.jsの高い拡張性" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="1,1.4,0" color="#381794"></text>
     <mesh diffuse="#FF6100" geometry="cube" scale="0.5" rotation="10,30,0"></mesh>
   </page>
-  <page color="#f9efd5" transition="reveal" duration="1" easing="swifter">
+  <page color="#f9efd5" transition="reveal" duration="1" easing="swifter" class="hashiwatashi">
     <camera></camera>
     <light rotation="0,45,45" intensity="3"></light>
     <text text="WebとCGを橋渡しになる" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,0.5,0" color="#381794"></text>
@@ -83,7 +83,7 @@
     <mesh rotation="x(-90d)" texture="src/page/logo.png" scale="3" material="new(unlit)"/>
     <mesh geometry="sphere" texture="src/page/3602.jpg" scale="10,10,-10" position="0,5,0" material="new(unlit)"></mesh>
   </page>
-  <page color="black" build="1" class="fusion-page" transition="black" duration="2" easing="swifter">
+  <page color="black" build="1" class="fusion" transition="black" duration="2" easing="swifter">
     <camera aspect="1.6" orthogonal="true" orthoSize="5"/>
     <mesh texture="src/page/web.png" position="4,0.2,3" scale="2.5" material="new(unlit)"/>
     <mesh texture="src/page/unity.png" position="-4,0.2,3" scale="2.5" material="new(unlit)"/>
@@ -95,20 +95,33 @@
     </camera>
     <light></light>
   </page>
-  <page color="#f9efd5" transition="black" duration="2" easing="swifter" class="comunity">
+  <page color="#f9efd5" transition="push" duration="1" easing="swifter" class="comunity">
     <camera></camera>
     <light></light>
     <text text="コミュニティの方の作品" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0,3,0" color="#381794"></text>
     <mesh texture="./src/page/comunity.png" scale="4.5,3,1" position="0,-0.5,0" material="new(unlit)"></mesh>
   </page>
-  <page color="black" duration="4" easing="swifter" transition="black" build="2" class="future">
+  <page color="#f9efd5" transition="black" duration="2" easing="swifter" class="khoronos">
     <camera></camera>
     <light></light>
-    <mesh class="future-image0" texture="./src/page/pictures/future-01.png" position="2,0,3" scale="2" material="new(unlit)" color="rgba(255,255,255,0)"></mesh>
-    <mesh class="future-image1" texture="./src/page/pictures/future-02.png" position="-2,0,3" scale="2" material="new(unlit)" color="rgba(255,255,255,0)"></mesh>
+    <text text="glTFサポート" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.5,3,0" color="#381794"></text>
+    <mesh texture="./src/page/khronos.png" scale="5.34,3,1" position="0,-0.5,0" material="new(unlit)"></mesh>
+  </page>
+  <page color="black" duration="2" easing="swifter" transition="black" build="1" class="future">
+    <camera></camera>
+    <light></light>
+    <mesh class="future-image0" texture="./src/page/pictures/future-02.png" position="0,0,3" scale="2" material="new(unlit)" color="rgba(255,255,255,0)"></mesh>
+    <!-- <mesh class="future-image1" texture="./src/page/pictures/future-02.png" position="-2,0,3" scale="2" material="new(unlit)" color="rgba(255,255,255,0)"></mesh> -->
     <mesh material="new(futureShader)" class="future-shader"/>
   </page>
-  <page color="black">
+  <page color="#f9efd5" duration="4" easing="swifter" transition="black" build="2" class="thanks">
+    <camera></camera>
+    <light></light>
+    <text text="謝辞" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0,1.6,0" color="#381794"></text>
+    <text text="Unity Technology Japan 簗瀬さん" font="35pt Noto Sans CJK JP" size="0.4" textAlign="centr" position="2,0.2,0" color="#381794"></text>
+    <text text="Mozilla Japan 清水さん" font="35pt Noto Sans CJK JP" size="0.4" textAlign="center" position="1.3,-0.7,0" color="#381794"></text>
+  </page>
+  <page color="black" class="end">
     <camera></camera>
     <light></light>
     <text text="END" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,0,0" color="#f9efd5"></text>
