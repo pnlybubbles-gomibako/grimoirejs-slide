@@ -72,4 +72,5 @@ $$('.world').on('hide', (i) => {
   $$('.world mesh').setAttribute('diffuse', 'orange');
   editorBuild.reset();
   $('#cg-engineer-tukaiyasui-container').stop(false, true).removeAttr('style');
+  delta = 0;
 });
