@@ -44,8 +44,8 @@ var main = function(selector, width, height) {
     }
     mesh.rotation.set(
       0,
-      mesh.rotation.y + .02,
-      mesh.rotation.z + .02,
+      mesh.rotation.y + 0.02,
+      mesh.rotation.z + 0.02
     );
     renderer.render(scene, camera);
   })();

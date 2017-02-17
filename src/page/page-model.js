@@ -7,7 +7,7 @@ $$('.model').on('build', (i) => {
   console.log('model', i);
   switch (i) {
     case 1:
-      $('#model-grimoire-container').stop(false, true).css({
+      $('#model-grimoire-container').stop(true, true).css({
         opacity: 1,
       }).animate({
         opacity: 0,
@@ -24,7 +24,7 @@ $$('.model').on('build', (i) => {
 });
 
 $$('.model').on('show', (i) => {
-  $('#model-grimoire-container').stop(false, true).css({
+  $('#model-grimoire-container').stop(true, true).css({
     opacity: 0,
   }).delay(200).promise().then((this_) => {
     $(this_).show();
@@ -37,5 +37,5 @@ $$('.model').on('show', (i) => {
 });
 
 $$('.model').on('hide', (i) => {
-  $('#model-grimoire-container').stop(false, true).removeAttr('style');
+  $('#model-grimoire-container').stop(true, true).removeAttr('style');
 });

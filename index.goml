@@ -60,7 +60,7 @@
     <light rotation="0,45,45" intensity="3"></light>
     <text text="拡張性" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,0,0" color="#381794"></text>
   </page>
- -->  <page color="#f9efd5" class="world" build="8" transition="push" duration="1" easing="swifter">
+ -->  <page color="#f9efd5" class="world" build="7" transition="push" duration="1" easing="swifter">
     <camera></camera>
     <light rotation="0,45,45" intensity="3"></light>
     <text text="Grimoire.jsの高い拡張性" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="1,1.4,0" color="#381794"></text>

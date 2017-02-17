@@ -30,26 +30,26 @@ const editorConfig = [
 const editors = require('./editor-settings')(editorConfig);
 
 $$('.compare').on('show', () => {
-  $('#jquery-container').stop(false, true).delay(500).fadeIn(500, swifter);
+  $('#jquery-container').stop(true, true).delay(500).fadeIn(500, swifter);
   $('#threejs-container').css({
     left: '50%',
-  }).stop(false, true).delay(500).fadeIn(500, swifter);
+  }).stop(true, true).delay(500).fadeIn(500, swifter);
 });
 $$('.compare').on('build', (i) => {
   switch (i) {
     case 1:
-      $('#jquery-container .flex').stop(false, true).animate({
+      $('#jquery-container .flex').stop(true, true).animate({
         height: 300,
       }, 500, swifter);
-      $('#threejs-container .flex').stop(false, true).animate({
+      $('#threejs-container .flex').stop(true, true).animate({
         height: 300,
       }, 500, swifter);
       break;
     case 2:
-      $('#jquery-container').stop(false, true).animate({
+      $('#jquery-container').stop(true, true).animate({
         left: '-50%',
       }, 500, swifter);
-      $('#threejs-container').stop(false, true).animate({
+      $('#threejs-container').stop(true, true).animate({
         left: '0%',
       }, 500, swifter);
       $('#grimoire-container .flex').css({
@@ -57,12 +57,12 @@ $$('.compare').on('build', (i) => {
       });
       $('#grimoire-container').css({
         left: '100%',
-      }).show().stop(false, true).animate({
+      }).show().stop(true, true).animate({
         left: '50%',
       }, 500, swifter);
       break;
     case 3:
-      $('#threejs-container').stop(false, true).css({
+      $('#threejs-container').stop(true, true).css({
         transform: 'scale(1)',
       })
       $({
@@ -80,12 +80,12 @@ $$('.compare').on('build', (i) => {
         queue: false,
       })
       $('#threejs-container').fadeOut(500, swifter);
-      $('#jquery-container').delay(200).stop(false, true).animate({
+      $('#jquery-container').delay(200).stop(true, true).animate({
         left: '0%',
       });
       break;
     case 4:
-      $('#sugoku-tukaiyasui-container').stop(false, true).css({
+      $('#sugoku-tukaiyasui-container').stop(true, true).css({
         transform: 'scale(2)',
       })
       $({
@@ -105,13 +105,13 @@ $$('.compare').on('build', (i) => {
       $('#sugoku-tukaiyasui-container').fadeIn(500, swifter);
       break;
     case 5:
-      $('.compare-container').stop(false, true).fadeOut(500, swifter).promise().then(() => {
+      $('.compare-container').stop(true, true).fadeOut(500, swifter).promise().then(() => {
         $$('.compare').single().getComponent('PageScene').operate(1);
       });
       break;
   }
 });
 $$('.compare').on('hide', (i) => {
-  $('.compare-container').stop(false, true).removeAttr('style');
-  $('.compare-container .flex').stop(false, true).removeAttr('style');
+  $('.compare-container').stop(true, true).removeAttr('style');
+  $('.compare-container .flex').stop(true, true).removeAttr('style');
 });
