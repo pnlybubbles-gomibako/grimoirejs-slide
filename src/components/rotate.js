@@ -1,17 +1,16 @@
-gr.registerComponent("Rotate",{
+gr.registerComponent('Rotate',{
   attributes:{
     speed:{
-      default:0.2,
-      converter:"Number"
-    }
+      default: 0.2,
+      converter: 'Number',
+    },
   },
   $mount(){
-    this.getAttributeRaw("speed").boundTo("speed");
-    this.transform = this.node.getComponent("Transform");
+    this.transform = this.node.getComponent('Transform');
     this.current = 0;
   },
   $update(){
-    this.current += this.speed;
-    this.transform.setAttribute("rotation",`y(${this.current})`);
+    this.current += this.getAttribute('speed');
+    this.transform.rotation = `y(${this.current})`;
   }
 });
