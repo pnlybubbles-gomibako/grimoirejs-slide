@@ -12,7 +12,7 @@ module.exports = (container, page, slideCount) => {
           $('#background .container').stop(false, true).animate({
             top: '-32%',
           }, 500, swifter);
-          $(container).delay(200).stop(false, true).fadeIn(500, swifter);
+          $(container).stop(false, true).delay(200).fadeIn(500, swifter);
           const color = $$(`${page} text`).getAttribute('color');
           $$(`${page} text`).setAttribute('color', new Color4(color.R, color.G, color.B, 0));
           break;

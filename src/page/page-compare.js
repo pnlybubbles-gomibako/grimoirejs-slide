@@ -1,6 +1,6 @@
 const gr = require('grimoirejs').default;
 const $ = require('jquery');
-const {swifter} = require('./easing');
+const { swifter } = require('./easing');
 require('./threejs-main')('#threejs-container .box', 512, 512);
 require('./jquery-main')('#jquery-container .box');
 require('./grimoire-main')('#compare-canvas', 'mesh');
