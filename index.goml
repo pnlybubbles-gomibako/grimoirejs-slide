@@ -101,12 +101,19 @@
     <text text="コミュニティの方の作品" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0,3,0" color="#381794"></text>
     <mesh texture="./src/page/comunity.png" scale="4.5,3,1" position="0,-0.5,0" material="new(unlit)"></mesh>
   </page>
-  <page color="black" duration="4" easing="swifter" transition="black" build="2" class="future">
+  <page color="black" duration="2" easing="swifter" transition="black" build="2" class="future">
     <camera></camera>
     <light></light>
     <mesh class="future-image0" texture="./src/page/pictures/future-01.png" position="2,0,3" scale="2" material="new(unlit)" color="rgba(255,255,255,0)"></mesh>
     <mesh class="future-image1" texture="./src/page/pictures/future-02.png" position="-2,0,3" scale="2" material="new(unlit)" color="rgba(255,255,255,0)"></mesh>
     <mesh material="new(futureShader)" class="future-shader"/>
+  </page>
+  <page color="#f9efd5" duration="4" easing="swifter" transition="black" build="2" class="future">
+    <camera></camera>
+    <light></light>
+    <text text="謝辞" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,2,0" color="#381794"></text>
+    <text text="Unity Technology Japan 簗瀬さん" font="35pt Noto Sans CJK JP" size="0.4" textAlign="centr" position="0.4,0.5,0" color="#381794"></text>
+    <text text="Mozilla Japan 清水さん" font="35pt Noto Sans CJK JP" size="0.4" textAlign="center" position="0.4,-0.5,0" color="#381794"></text>
   </page>
   <page color="black">
     <camera></camera>
