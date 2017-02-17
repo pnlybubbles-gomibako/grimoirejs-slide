@@ -16,6 +16,9 @@ module.exports = class SlideRenderer extends Component {
   }
 
   $mount() {
+    if (this.node.parent.getComponentsInChildren('PageScene').length === 0) {
+      return;
+    }
     this.currentScene = this.node.addChildByName('render-scene', {
       id: 'current-render-scene',
       out: 'current-buffer',
