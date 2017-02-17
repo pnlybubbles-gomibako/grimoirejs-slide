@@ -55,12 +55,7 @@
     <text text="WebGLのためのマークアップ" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,1.4,0" color="#381794"></text>
     <mesh id="cube" diffuse="#FF6100" geometry="cube" scale="0.5" rotation="10,30,0"></mesh>
   </page>
-<!--   <page color="#f9efd5" transition="push" duration="1" easing="swifter">
-    <camera></camera>
-    <light rotation="0,45,45" intensity="3"></light>
-    <text text="拡張性" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,0,0" color="#381794"></text>
-  </page>
- -->  <page color="#f9efd5" class="world" build="7" transition="push" duration="1" easing="swifter">
+  <page color="#f9efd5" class="world" build="7" transition="push" duration="1" easing="swifter">
     <camera></camera>
     <light rotation="0,45,45" intensity="3"></light>
     <text text="Grimoire.jsの高い拡張性" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="1,1.4,0" color="#381794"></text>
@@ -75,15 +70,6 @@
   <page color="black" class="model" transition="noise" duration="2" easing="swifter" build="2">
     <camera></camera>
     <light></light>
-    <!-- <object>
-      <object.components>
-        <Rotate/>
-      </object.components>
-      <camera far="200" position="0,1,2" rotation="x(-20d)"/>
-    </object>
-    <model src="src/page/BrainStem.glb" scale="0.5"/>
-    <mesh rotation="x(-90d)" texture="src/page/logo.png" scale="3" material="new(unlit)"/>
-    <mesh geometry="sphere" texture="src/page/3602.jpg" scale="10,10,-10" position="0,5,0" material="new(unlit)"></mesh> -->
   </page>
   <page color="black" build="1" class="fusion" transition="black" duration="2" easing="swifter">
     <camera aspect="1.6" orthogonal="true" orthoSize="5"/>
@@ -113,7 +99,6 @@
     <camera></camera>
     <light></light>
     <mesh class="future-image0" texture="./src/page/pictures/future-02.png" position="0,0,3" scale="2" material="new(unlit)" color="rgba(255,255,255,0)"></mesh>
-    <!-- <mesh class="future-image1" texture="./src/page/pictures/future-02.png" position="-2,0,3" scale="2" material="new(unlit)" color="rgba(255,255,255,0)"></mesh> -->
     <mesh material="new(futureShader)" class="future-shader"/>
   </page>
   <page color="black" duration="4" easing="swifter" transition="black" class="thanks">
@@ -129,15 +114,4 @@
     <light></light>
     <text text="END" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,0,0" color="#f9efd5"></text>
   </page>
-  <!-- <renderer>
-    <texture-buffer name="current-buffer"></texture-buffer>
-    <texture-buffer name="previous-buffer"></texture-buffer>
-    <render-scene class="currentScene" camera=".cam1" out="current-buffer" enabled="true"></render-scene>
-    <render-scene class="previousScene" camera=".cam2" out="previous-buffer" enabled="false"></render-scene>
-    <slide-render-scene
-      material="new(transition-slide)"
-      current="backbuffer(current-buffer)"
-      previous="backbuffer(previous-buffer)">
-    </slide-render-scene>
-  </renderer> -->
 </goml>

@@ -2,6 +2,6 @@
   <scene>
     <camera></camera>
     <light rotation="0,45,45" intensity="3"></light>
-    <mesh diffuse="orange" geometry="cube" scale="0.5" id="cube" rotation="10,30,0"></mesh>
+    <mesh id="cube" diffuse="orange" geometry="cube" scale="0.5" rotation="10,30,0"></mesh>
   </scene>
 </goml>
