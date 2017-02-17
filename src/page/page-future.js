@@ -24,13 +24,13 @@ $$('.future').on('build', (i) => {
         tweenable = null;
       });
       break;
-    case 2:
-      if (tweenable) {
-        tweenable.stop();
-        tweenable = null;
-      }
-      tweenable = fadeIn('.future .future-image1');
-      break;
+    // case 2:
+    //   if (tweenable) {
+    //     tweenable.stop();
+    //     tweenable = null;
+    //   }
+    //   tweenable = fadeIn('.future .future-image1');
+    //   break;
   }
 });
 
@@ -40,5 +40,5 @@ $$('.future').on('hide', () => {
     tweenable = null;
   }
   $$('.future .future-image0').setAttribute('color', new Color4(1, 1, 1, 0));
-  $$('.future .future-image1').setAttribute('color', new Color4(1, 1, 1, 0));
+  // $$('.future .future-image1').setAttribute('color', new Color4(1, 1, 1, 0));
 });

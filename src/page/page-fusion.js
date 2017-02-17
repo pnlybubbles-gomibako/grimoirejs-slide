@@ -1,6 +1,6 @@
 const Tweenable = require('shifty');
 const $$ = gr('#canvas');
-const fp = $$('.fusion-page');
+const fp = $$('.fusion');
 const { Color4 } = require('grimoirejs-math').default;
 
 let tweenable = null
