@@ -44,6 +44,8 @@ $$('.compare').on('build', (i) => {
       $('#threejs-container .flex').stop(true, true).animate({
         height: 300,
       }, 500, swifter);
+      $('#jquery-container .caption').text('jQuery');
+      $('#threejs-container .caption').text('three.js');
       break;
     case 2:
       $('#jquery-container').stop(true, true).animate({
@@ -114,4 +116,6 @@ $$('.compare').on('build', (i) => {
 $$('.compare').on('hide', (i) => {
   $('.compare-container').stop(true, true).removeAttr('style');
   $('.compare-container .flex').stop(true, true).removeAttr('style');
+  $('#jquery-container .caption').text('HTML');
+  $('#threejs-container .caption').text('WebGL');
 });

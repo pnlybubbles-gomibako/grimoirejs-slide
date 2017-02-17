@@ -28,8 +28,8 @@ const editorConfig = [
 ];
 const editors = require('./editor-settings')(editorConfig);
 
-editorRunable.goml('#world-container .right .run', '.world', editors[2]);
-editorRunable.goml('#world-container .rrright .run', '.world', editors[4]);
+editorRunable.goml('#world-container .middle .run', '.world', editors[1]);
+editorRunable.goml('#world-container .rright .run', '.world', editors[3]);
 
 const editorBuild = require('./editor-build')('#world-container', '.world', 3);
 let delta = 0;
