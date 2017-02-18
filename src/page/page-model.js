@@ -4,7 +4,6 @@ const $$ = gr('#canvas');
 const { swifter } = require('./easing');
 
 $$('.model').on('build', (i) => {
-  console.log('model', i);
   switch (i) {
     case 1:
       $('#model-grimoire-container').stop(true, true).css({
@@ -37,5 +36,5 @@ $$('.model').on('show', (i) => {
 });
 
 $$('.model').on('hide', (i) => {
-  $('#model-grimoire-container').stop(true, true).removeAttr('style');
+  $('#model-grimoire-container').stop(true, false).removeAttr('style');
 });

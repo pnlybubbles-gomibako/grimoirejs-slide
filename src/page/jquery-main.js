@@ -5,7 +5,7 @@ module.exports = (selector) => {
     $(selector).mouseover(function(){
       $(this).css('background-color', 'blue');
     }).mouseout(function() {
-      $(this).stop(true, true).removeAttr('style');
+      $(this).removeAttr('style');
     });
   });
 };

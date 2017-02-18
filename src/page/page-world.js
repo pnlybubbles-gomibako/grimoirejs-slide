@@ -68,6 +68,6 @@ $$('.world').on('build', (i) => {
 $$('.world').on('hide', (i) => {
   $$('.world mesh').setAttribute('diffuse', 'orange');
   editorBuild.reset();
-  $('#cg-engineer-tukaiyasui-container').stop(true, true).removeAttr('style');
+  $('#cg-engineer-tukaiyasui-container').stop(true, false).removeAttr('style');
   delta = 0;
 });

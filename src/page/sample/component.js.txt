@@ -1,15 +1,15 @@
 gr.registerComponent("Rotate", {
-  attributes:{
-    speed:{
+  attributes: {
+    speed: {
       default: 0.2,
       converter: "Number",
     },
   },
-  $mount(){
+  $mount() {
     this.transform = this.node.getComponent("Transform");
     this.current = 0;
   },
-  $update(){
+  $update() {
     this.current += this.getAttribute("speed");
     this.transform.rotation = `y(${this.current})`;
   }

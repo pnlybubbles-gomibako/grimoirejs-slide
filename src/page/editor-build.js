@@ -31,9 +31,9 @@ module.exports = (container, page, slideCount) => {
       }
     },
     reset: () => {
-      $(container).stop(true, true).removeAttr('style');
-      $(`${container} .wrap`).stop(true, true).removeAttr('style');
-      $('#background .container').stop(true, true).removeAttr('style');
+      $(container).stop(true, false).removeAttr('style');
+      $(`${container} .wrap`).stop(true, false).removeAttr('style');
+      $('#background .container').stop(true, false).removeAttr('style');
       const color = $$(`${page} text`).getAttribute('color');
       $$(`${page} text`).setAttribute('color', new Color4(color.R, color.G, color.B, 1));
     },

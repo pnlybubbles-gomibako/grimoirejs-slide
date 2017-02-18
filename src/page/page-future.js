@@ -1,20 +1,8 @@
 const gr = require('grimoirejs').default;
 const $$ = gr('#canvas');
-const Tweenable = require('shifty');
+const { fadeIn } = require('./fade');
 const { Color4 } = require('grimoirejs-math').default;
 
-const fadeIn = (selector, finish) => {
-  return (new Tweenable()).tween({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-    duration: 1000,
-    easing: 'swifter',
-    step(state) {
-      $$(selector).setAttribute('color', new Color4(1, 1, 1, state.opacity));
-    },
-    finish: finish,
-  });
-}
 let tweenable = null;
 $$('.future').on('build', (i) => {
   switch (i) {

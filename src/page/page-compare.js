@@ -114,8 +114,8 @@ $$('.compare').on('build', (i) => {
   }
 });
 $$('.compare').on('hide', (i) => {
-  $('.compare-container').stop(true, true).removeAttr('style');
-  $('.compare-container .flex').stop(true, true).removeAttr('style');
+  $('.compare-container').stop(true, false).removeAttr('style');
+  $('.compare-container .flex').stop(true, false).removeAttr('style');
   $('#jquery-container .caption').text('HTML');
   $('#threejs-container .caption').text('WebGL');
 });

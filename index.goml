@@ -76,11 +76,12 @@
     <camera></camera>
     <light></light>
   </page>
-  <page color="black" build="1" class="fusion" transition="black" duration="2" easing="swifter">
+  <page color="black" build="2" class="fusion" transition="black" duration="2" easing="swifter">
     <camera aspect="1.6" orthogonal="true" orthoSize="5"/>
-    <mesh texture="src/page/web.png" position="4,0.2,3" scale="2.5" material="new(unlit)"/>
-    <mesh texture="src/page/unity.png" position="-4,0.2,3" scale="2.5" material="new(unlit)"/>
+    <mesh texture="src/page/web.png" position="4,0.2,3" scale="2.5" material="new(unlit)" class="gr-side"/>
+    <mesh texture="src/page/unity.png" position="-4,0.2,3" scale="2.5" material="new(unlit)" class="gr-side"/>
     <mesh texture="src/page/logo.png" position="0,0,3" scale="2" material="new(unlit)" class="gr-logo" color="rgba(255,255,255,0)"/>
+    <mesh texture="src/page/arrow.png" position="0,0,4" scale="6" material="new(unlit)" class="gr-arrow" color="rgba(255,255,255,0)"/>
     <mesh material="new(fusionShader)" class="fusion-shader" progress="0"/>
   </page>
   <page color="#f9efd5" class="slideshow" build="8" duration="1" easing="swifter" transition="push">
@@ -111,9 +112,9 @@
     <camera></camera>
     <light></light>
     <text text="謝辞" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0,1.8,0" color="#f9efd5"></text>
-    <text text="Unity Technology Japan 簗瀬さん" font="35pt Noto Sans CJK JP" size="0.4" textAlign="centr" position="2,0.4,0" color="#f9efd5"></text>
-    <text text="Mozilla Japan 清水さん" font="35pt Noto Sans CJK JP" size="0.4" textAlign="center" position="1.3,-0.5,0" color="#f9efd5"></text>
-    <text text="AMATELUS Inc. 松田さん" font="35pt Noto Sans CJK JP" size="0.4" textAlign="center" position="1.2,-1.4,0" color="#f9efd5"></text>
+    <text text="Unity Technology Japan 簗瀬 様" font="35pt Noto Sans CJK JP" size="0.4" textAlign="centr" position="2,0.4,0" color="#f9efd5"></text>
+    <text text="Mozilla Japan 清水 様" font="35pt Noto Sans CJK JP" size="0.4" textAlign="center" position="1.3,-0.5,0" color="#f9efd5"></text>
+    <text text="AMATELUS Inc. 松田 様" font="35pt Noto Sans CJK JP" size="0.4" textAlign="center" position="1.2,-1.4,0" color="#f9efd5"></text>
   </page>
   <page color="black" class="end">
     <camera></camera>
