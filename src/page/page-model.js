@@ -10,7 +10,7 @@ $$('.model').on('build', (i) => {
         opacity: 1,
       }).animate({
         opacity: 0,
-      }, 500, swifter).promise().then((this_) => {
+      }, 500, swifter).promise().done((this_) => {
         gr('#model')('goml').setAttribute('height', '512');
         gr('#model')('goml').setAttribute('width', '512');
         $(this_).hide();
@@ -25,7 +25,7 @@ $$('.model').on('build', (i) => {
 $$('.model').on('show', (i) => {
   $('#model-grimoire-container').stop(true, true).css({
     opacity: 0,
-  }).delay(200).promise().then((this_) => {
+  }).delay(200).promise().done((this_) => {
     $(this_).show();
     gr('#model')('goml').setAttribute('height', 'fit');
     gr('#model')('goml').setAttribute('width', 'fit');

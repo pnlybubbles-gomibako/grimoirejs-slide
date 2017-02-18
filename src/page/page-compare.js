@@ -107,7 +107,7 @@ $$('.compare').on('build', (i) => {
       $('#sugoku-tukaiyasui-container').fadeIn(500, swifter);
       break;
     case 5:
-      $('.compare-container').stop(true, true).fadeOut(500, swifter).promise().then(() => {
+      $('.compare-container').stop(true, true).fadeOut(500, swifter).promise().done(() => {
         $$('.compare').single().getComponent('PageScene').operate(1);
       });
       break;

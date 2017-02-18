@@ -17,7 +17,7 @@ $$('.webgl-start').on('hide', (_, delta) => {
 $$('.webgl-end').on('build', (i) => {
   switch (i) {
     case 1:
-      $('.webgl-caption-container').stop(true, true).fadeOut(500, swifter).promise().then(() => {
+      $('.webgl-caption-container').stop(true, true).fadeOut(500, swifter).promise().done(() => {
         $$('.webgl-end').single().getComponent('PageScene').operate(1);
       });
       break;
