@@ -15,18 +15,6 @@ const fadeIn = (selector, finish) => {
     finish: finish,
   });
 }
-const fadeOut = (selector, finish) => {
-  return (new Tweenable()).tween({
-    from: { opacity: 1 },
-    to: { opacity: 0 },
-    duration: 1000,
-    easing: 'swifter',
-    step(state) {
-      $$(selector).setAttribute('color', new Color4(1, 1, 1, state.opacity));
-    },
-    finish: finish,
-  });
-}
 let tweenable = null;
 $$('.future').on('build', (i) => {
   switch (i) {
@@ -40,9 +28,9 @@ $$('.future').on('build', (i) => {
         tweenable.stop();
         tweenable = null;
       }
-      debugger;
-      tweenable = fadeIn('.future .future-image2');
-      //fadeOut('.future .future-image1');
+      tweenable = fadeIn('.future .future-image2', () => {
+        tweenable = null;
+      });
       break;
   }
 });
