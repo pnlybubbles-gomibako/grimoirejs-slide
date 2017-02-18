@@ -95,10 +95,11 @@
     <text text="glTFサポート" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.5,3,0" color="#381794"></text>
     <mesh texture="./src/page/khronos.png" scale="5.34,3,1" position="0,-0.5,0" material="new(unlit)"></mesh>
   </page>
-  <page color="black" duration="4" easing="swifter" transition="black" build="1" class="future">
+  <page color="black" duration="4" easing="swifter" transition="black" build="3" class="future">
     <camera></camera>
     <light></light>
-    <mesh class="future-image0" texture="./src/page/pictures/future-02.png" position="0,0,3" scale="2" material="new(unlit)" color="rgba(255,255,255,0)"></mesh>
+    <mesh class="future-image1" texture="./src/page/pictures/future1.png" position="0,0,3" scale="2" material="new(unlit)" color="rgba(255,255,255,0)"></mesh>
+    <mesh class="future-image2" texture="./src/page/pictures/future2.png" position="0,0,3.2" scale="2" material="new(unlit)" color="rgba(255,255,255,0)"></mesh>
     <mesh material="new(futureShader)" class="future-shader"/>
   </page>
   <page color="black" duration="4" easing="swifter" transition="black" class="thanks">
