@@ -55,6 +55,11 @@
     <text text="WebGLのためのマークアップ" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0.4,1.4,0" color="#381794"></text>
     <mesh id="cube" diffuse="#FF6100" geometry="cube" scale="0.5" rotation="10,30,0"></mesh>
   </page>
+  <page color="#f9efd5" transition="push" duration="1" easing="swifter">
+    <camera></camera>
+    <light></light>
+    <text text="もっと高度なことをするには?" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0,0,0" color="#381794"></text>
+  </page>
   <page color="#f9efd5" class="world" build="7" transition="push" duration="1" easing="swifter">
     <camera></camera>
     <light rotation="0,45,45" intensity="3"></light>
@@ -100,7 +105,7 @@
     <light></light>
     <mesh class="future-image1" texture="./src/page/pictures/future1.png" position="0,0,3" scale="2" material="new(unlit)" color="rgba(255,255,255,0)"></mesh>
     <mesh class="future-image2" texture="./src/page/pictures/future2.png" position="0,0,3.2" scale="2" material="new(unlit)" color="rgba(255,255,255,0)"></mesh>
-    <mesh material="new(futureShader)" class="future-shader"/>
+    <mesh material="new(futureShader)" class="future-shader" march="32"/>
   </page>
   <page color="black" duration="4" easing="swifter" transition="black" class="thanks">
     <camera></camera>
