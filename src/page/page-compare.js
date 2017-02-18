@@ -50,6 +50,29 @@ $$('.compare').on('build', (i) => {
       $('#threejs-container .caption').text('three.js');
       break;
     case 3:
+    $('#kizyutuga-hanzatu-container').stop(true, true).css({
+        transform: 'scale(2)',
+      })
+      $({
+        scale: 2,
+      }).animate({
+        scale: 1,
+      }, {
+        duration: 500,
+        easing: swifter,
+        step(now) {
+          $('#kizyutuga-hanzatu-container').css({
+            transform: `scale(${now})`,
+          });
+        },
+        queue: false,
+      });
+      $('#kizyutuga-hanzatu-container').fadeIn(500, swifter);
+      break;
+    case 4:
+      $('#kizyutuga-hanzatu-container').stop(true, true).fadeOut(500, swifter);
+      break;
+    case 5:
       $('#jquery-container').stop(true, true).animate({
         left: '-50%',
       }, 500, swifter);
@@ -65,7 +88,7 @@ $$('.compare').on('build', (i) => {
         left: '50%',
       }, 500, swifter);
       break;
-    case 4:
+    case 6:
       $('#threejs-container').stop(true, true).css({
         transform: 'scale(1)',
       })
@@ -88,7 +111,7 @@ $$('.compare').on('build', (i) => {
         left: '0%',
       });
       break;
-    case 5:
+    case 7:
       $('#sugoku-tukaiyasui-container').stop(true, true).css({
         transform: 'scale(2)',
       })
@@ -108,7 +131,7 @@ $$('.compare').on('build', (i) => {
       });
       $('#sugoku-tukaiyasui-container').fadeIn(500, swifter);
       break;
-    case 6:
+    case 8:
       $('.compare-container').stop(true, true).fadeOut(500, swifter).promise().done(() => {
         $$('.compare').single().getComponent('PageScene').operate(1);
       });
