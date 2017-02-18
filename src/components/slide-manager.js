@@ -41,7 +41,8 @@ module.exports = class SlideManager extends Component {
   $mount() {
     process.nextTick(() => {
       process.nextTick(() => {
-        this.operate(0);
+        const page = parseInt(document.location.hash.substr(1), 10);
+        this.operate(page || 0);
       });
     });
   }
@@ -66,6 +67,7 @@ module.exports = class SlideManager extends Component {
     });
     currentPageScene.node.emit('show', currentNumber, delta);
     this.number += delta;
+    document.location.hash = this.number;
     this.build = 0;
   }
 
