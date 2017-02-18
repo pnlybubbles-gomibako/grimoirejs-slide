@@ -44,7 +44,7 @@
     <camera></camera>
     <mesh material="new(webcamShader)"></mesh>
   </page>
-  <page color="#f9efd5" class="compare" build="5" transition="push" duration="1" easing="swifter">
+  <page color="#f9efd5" class="compare" build="6" transition="push" duration="1" easing="swifter">
     <camera></camera>
     <mesh geometry="cube" scale="0"></mesh>
     <light rotation="0,45,45" intensity="3"></light>

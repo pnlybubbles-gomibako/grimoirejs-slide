@@ -41,13 +41,15 @@ $$('.compare').on('build', (i) => {
       $('#jquery-container .flex').stop(true, true).animate({
         height: 300,
       }, 500, swifter);
+      $('#jquery-container .caption').text('jQuery');
+      break;
+    case 2:
       $('#threejs-container .flex').stop(true, true).animate({
         height: 300,
       }, 500, swifter);
-      $('#jquery-container .caption').text('jQuery');
       $('#threejs-container .caption').text('three.js');
       break;
-    case 2:
+    case 3:
       $('#jquery-container').stop(true, true).animate({
         left: '-50%',
       }, 500, swifter);
@@ -63,7 +65,7 @@ $$('.compare').on('build', (i) => {
         left: '50%',
       }, 500, swifter);
       break;
-    case 3:
+    case 4:
       $('#threejs-container').stop(true, true).css({
         transform: 'scale(1)',
       })
@@ -86,7 +88,7 @@ $$('.compare').on('build', (i) => {
         left: '0%',
       });
       break;
-    case 4:
+    case 5:
       $('#sugoku-tukaiyasui-container').stop(true, true).css({
         transform: 'scale(2)',
       })
@@ -106,7 +108,7 @@ $$('.compare').on('build', (i) => {
       });
       $('#sugoku-tukaiyasui-container').fadeIn(500, swifter);
       break;
-    case 5:
+    case 6:
       $('.compare-container').stop(true, true).fadeOut(500, swifter).promise().done(() => {
         $$('.compare').single().getComponent('PageScene').operate(1);
       });
