@@ -25,6 +25,6 @@ gr(() => {
   require('./page/page-fusion');
   require('./page/page-webgl');
   require('./page/page-model');
-  require('./page/page-slideshow');
-  require('./page/page-future');
+  // require('./page/page-slideshow');
+  // require('./page/page-future');
 });

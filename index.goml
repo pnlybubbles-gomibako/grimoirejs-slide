@@ -4,7 +4,7 @@
   <import-material typeName="fusionShader" src="./src/page/fusion.sort"></import-material>
   <import-material typeName="webcamShader" src="./src/page/webcam.sort"></import-material>
   <import-material typeName="futureShader" src="./src/page/future.sort"></import-material>
-  <page color="#f9efd5" transition="noise" duration="1" class="opening" build="2">
+  <page color="#f9efd5" transition="noise" duration="1" class="opening" build="0">
     <object class="camera-origin">
       <camera/>
     </object>
@@ -61,7 +61,7 @@
     <light></light>
     <text text="もっと高度なことをするには?" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="0,0,0" color="#381794"></text>
   </page>
-  <page color="#f9efd5" class="world" build="7" transition="push" duration="1" easing="swifter">
+  <page color="#f9efd5" class="world" build="5" transition="push" duration="1" easing="swifter">
     <camera></camera>
     <light rotation="0,45,45" intensity="3"></light>
     <text text="Grimoire.jsの高い拡張性" font="Bold 35pt Noto Sans CJK JP" size="0.5" textAlign="center" position="1,1.4,0" color="#381794"></text>
@@ -85,7 +85,7 @@
     <mesh texture="src/page/arrow.png" position="0,0,4" scale="6" material="new(unlit)" class="gr-arrow" color="rgba(255,255,255,0)"/>
     <mesh material="new(fusionShader)" class="fusion-shader" progress="0"/>
   </page>
-  <page color="#f9efd5" class="slideshow" build="8" duration="1" easing="swifter" transition="push">
+  <!-- <page color="#f9efd5" class="slideshow" build="8" duration="1" easing="swifter" transition="push">
     <camera position="0,0,-12" fovy="140">
     </camera>
     <light></light>
@@ -116,7 +116,7 @@
     <text text="Unity Technology Japan 簗瀬 様" font="35pt Noto Sans CJK JP" size="0.4" textAlign="centr" position="2,0.4,0" color="#f9efd5"></text>
     <text text="Mozilla Japan 清水 様" font="35pt Noto Sans CJK JP" size="0.4" textAlign="center" position="1.3,-0.5,0" color="#f9efd5"></text>
     <text text="AMATELUS Inc. 松田 様" font="35pt Noto Sans CJK JP" size="0.4" textAlign="center" position="1.2,-1.4,0" color="#f9efd5"></text>
-  </page>
+  </page> -->
   <page color="black" class="end">
     <camera></camera>
     <light></light>

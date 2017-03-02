@@ -31,7 +31,7 @@ const editors = require('./editor-settings')(editorConfig);
 editorRunable.goml('#world-container .middle .run', '.world', editors[1]);
 editorRunable.goml('#world-container .rright .run', '.world', editors[3]);
 
-const editorBuild = require('./editor-build')('#world-container', '.world', 3);
+const editorBuild = require('./editor-build')('#world-container', '.world', 1);
 let delta = 0;
 const apealPointFloatingBuild = 2;
 $$('.world').on('build', (i) => {

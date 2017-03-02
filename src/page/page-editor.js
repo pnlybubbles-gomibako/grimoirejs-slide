@@ -17,7 +17,7 @@ const editorConfig = [
   {
     id: 'js-editor',
     mode: 'javascript',
-    text: 'alert("hello world");',
+    text: require('./sample/mouse.js.txt'),
   },
 ];
 const editors = require('./editor-settings')(editorConfig);
